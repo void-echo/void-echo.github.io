@@ -1,23 +1,954 @@
-{% extends '_layout.swig' %}
-{% import '_macro/post.swig' as post_template %}
-{% import '_macro/sidebar.swig' as sidebar_template %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
-{% block title %}{{ config.title }}{% if theme.index_with_subtitle and config.subtitle %} - {{config.subtitle }}{% endif %}{% endblock %}
+<link rel="stylesheet" href="/css/main.css">
 
-{% block page_class %}
-  {% if is_home() %}page-home{% endif -%}
-{% endblock %}
 
-{% block content %}
-  <section id="posts" class="posts-expand">
-    {% for post in page.posts %}
-      {{ post_template.render(post, true) }}
-    {% endfor %}
-  </section>
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 
-  {% include '_partials/pagination.swig' %}
-{% endblock %}
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"github.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
 
-{% block sidebar %}
-  {{ sidebar_template.render(false) }}
-{% endblock %}
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Void-Echo">
+<meta property="og:url" content="https://github.com/index.html">
+<meta property="og:site_name" content="Void-Echo">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://github.com/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'en'
+  };
+</script>
+
+  <title>Void-Echo</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Void-Echo</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content index posts-expand">
+            
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://github.com/2021/05/30/%E9%9A%8F%E6%83%B3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Void-Echo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/05/30/%E9%9A%8F%E6%83%B3/" class="post-title-link" itemprop="url">随想</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2021-05-30 11:03:18 / Modified: 11:09:16" itemprop="dateCreated datePublished" datetime="2021-05-30T11:03:18+08:00">2021-05-30</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="为什么国内做网站还需要备案呢…"><a href="#为什么国内做网站还需要备案呢…" class="headerlink" title="为什么国内做网站还需要备案呢…."></a>为什么国内做网站还需要备案呢….</h1><p>恐怕这样的环境只会劝退越来越多的开发者.</p>
+<p>CSDN和博客园也是越来越吃相难看. </p>
+<p>希望将来能够去外企吧. </p>
+<p><img src="/2021/05/30/%E9%9A%8F%E6%83%B3/image-20210530110901087.png" alt="我的壁纸真好看..."></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://github.com/2021/05/29/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%89%E4%B8%96%E7%95%8C/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Void-Echo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/05/29/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%89%E4%B8%96%E7%95%8C/" class="post-title-link" itemprop="url">我的第三世界</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2021-05-29 13:04:41 / Modified: 13:06:49" itemprop="dateCreated datePublished" datetime="2021-05-29T13:04:41+08:00">2021-05-29</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="日本語の文法"><a href="#日本語の文法" class="headerlink" title="日本語の文法"></a>日本語の文法</h2><ul>
+<li><p><strong>．．．ます</strong>        现在和未来发生的动作</p>
+</li>
+<li><p><strong>．．．ました</strong>    过去发生的动作</p>
+</li>
+<li><p><strong>．．．ませんでした</strong>    过去否定</p>
+<p><u>王さんは食べませんでした</u></p>
+<p>「小王还没吃。 在上午，昨天，十分钟前，一小时前等等都没有吃东西。」</p>
+</li>
+<li><p><strong>ではありません、じゃありません否定</strong></p>
+<p><u>王さんは男の子ではありません 。</u></p>
+<p>「小王不是男生。现在不是男生，以后也不会是男生。彻底的否定。」</p>
+</li>
+<li><p><strong>ね</strong></p>
+<ol>
+<li>表确认</li>
+<li>表感叹</li>
+<li><strong>期待对方同意</strong></li>
+<li><strong>叮咛嘱咐</strong></li>
+</ol>
+</li>
+<li><p><strong>~  へ / に行（い）きます/  来（き）ます  /  帰ります（かえ）</strong></p>
+</li>
+<li><p><strong>いつ     什么时候</strong></p>
+</li>
+<li><p><strong>昨日花見しました。</strong></p>
+<ul>
+<li>我昨天看了樱花。</li>
+</ul>
+</li>
+<li><p><strong>しました ・ しまいました</strong></p>
+<ul>
+<li><p>第一：两者的原型不同</p>
+<p>1、「しました」的原型是「する」，「する」变成「ます」形就成了「します」，然后变成相应的过去式就成了「しました」。</p>
+<p>2、「しまいました」的原型是「しまう」，「しまう」变成「ます」形就成了「しまいます」，「しまいます」变成相应的过去式就成了「しまいました」。</p>
+</li>
+<li><p>第二：两者的含义不同</p>
+<p>1、「<strong>しました</strong>」的含义是在<strong>过去做了某个动作、某件事情</strong>。强调动作发生的时间是在过去，在过去进行了某个行为。<br>例如：</p>
+<p><u>昨日、ピアノの练习をしました</u>。</p>
+<p>昨天我练习了弹钢琴。</p>
+<p><u>先周、日本で买った本を王さんに贷しました。</u></p>
+<p>上个礼拜我把在日本买的书借给了小王。</p>
+<p>通过这两个例句我们可以看出，借书给小王、练习钢琴的动作是发生在过去的。</p>
+<p>2、「<strong>しまいました</strong>」的含义是某个动作<strong>在过去已经完成了、动作已经终了了</strong>。</p>
+<p>例如：</p>
+<p><u>ひらがなは全部覚えてしまいました。</u></p>
+<p>平假名全部记完了。</p>
+<p><u>その本はもう読んでしまいました。</u></p>
+<p>这本书已经读完了。</p>
+<p>通过例句可以看出，「しまいました」表达出的含义是动作的终结，记完了、读完了，动作已经结束了。</p>
+<p>3、除此之外，「しまいました」还表达了说话人<strong>后悔或者遗憾的心情</strong>，</p>
+<p>这一点是「しました」所没有的。<br>例如：</p>
+<p><u>大切な花瓶をわってしまいました。</u></p>
+<p>特别珍惜的花瓶弄碎了（遗憾的心情）。</p>
+<p>第三：二者的接续方式不同</p>
+<p>1、「<strong>しました</strong>」可以直接接续在「练习」、「勉强」等<strong>「サ」变动词的后面</strong>。</p>
+<p>例如：</p>
+<p>努力しました。</p>
+<p>努力了。</p>
+<p>2、「<strong>しまいました</strong>」大部分情况是接续在动词的<strong>「て」形之后</strong>。</p>
+<p>例如：</p>
+<p>壊れてしまいました。</p>
+<p>坏掉了。</p>
+</li>
+</ul>
+</li>
+<li><p><strong>します・する</strong></p>
+<ul>
+<li></li>
+</ul>
+</li>
+<li><p><strong>名を动</strong></p>
+<ul>
+<li>这里的を读お</li>
+<li><u>李さんは毎日（まいにち）コーヒーを飲（の）みます。</u><ul>
+<li>小李每天喝咖啡</li>
+</ul>
+</li>
+<li></li>
+</ul>
+</li>
+<li><p><strong>日语中「が ほしいです」「たいです」「ようと思います」</strong></p>
+<p><strong>三种句型区别？</strong></p>
+<p>「～がほしいです」表示想要某个东西，が前面是个名词。</p>
+<p><u>りんごがほしいです。</u>（想要个苹果。）</p>
+<p>「～たいです」表示想要做某件事，前面是动词ます形。</p>
+<p><u>りんごが食べたいです。</u>（想要吃苹果。）</p>
+<p>剩下一个加了个「と思います」，所以分开说。</p>
+<p>先看一下「たいです」和「たいと思います」的区别吧。</p>
+<p>「たいです」这个想，比较直接、直观、本能，在正式场合这么说可能会给人比较小孩子气的感觉</p>
+<p>「たいと思います」这个想，因为加了个「と思います」所以显得比较理性一点，是有经过大脑思考的，有一定的心理活动的。</p>
+<p>再看「～たいと思います」和「～ようと思います」的区别</p>
+<p>「～たいと思います」是想想而已，未必会付诸实践</p>
+<p>「～ようと思います」因为这个「よう」只是动词意志形，所以有人的比较强烈的意志在，那么这个想法就不只是想法，很可能会付诸实践</p>
+<p>比如</p>
+<p><u>旅行に行きたいと思います。</u></p>
+<p>（我想去旅行，但只是想想而已，八竿子还没一撇呢，的感觉）</p>
+<p>旅行に行こうと思います。（我要去旅行，已经整装待发就差一张机票了，的感觉）</p>
+</li>
+<li><p><img src="/2021/05/29/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%89%E4%B8%96%E7%95%8C/image-20210219075003648.png" alt="image-20210219075003648"></p>
+</li>
+<li><p><strong>【时间】から    【时间】まで  【动】</strong></p>
+<ul>
+<li>表动作的持续期间</li>
+<li><u>わたしわ9時から5時まで働きます。</u></li>
+<li>我9点到5点工作</li>
+</ul>
+</li>
+<li><p><strong>いつ  【动】ますか</strong></p>
+<ul>
+<li>询问动作或事态进行的时间。询问的时间很具体时，在具体时间后面+<strong>に</strong></li>
+<li>何時に・何曜日に・何日（にち）に</li>
+<li><img src="/2021/05/29/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%89%E4%B8%96%E7%95%8C/image-20210219075949535.png" alt="image-20210219075949535"></li>
+</ul>
+</li>
+</ul>
+<h3 id="助词“と、ば、たら、なら”的区别"><a href="#助词“と、ば、たら、なら”的区别" class="headerlink" title="助词“と、ば、たら、なら”的区别"></a>助词“と、ば、たら、なら”的区别</h3><ul>
+<li><p><strong>1. 結果：と、たら、（ば）</strong></p>
+<ul>
+<li><p>这个用法表达的是“<strong>后面是前面的事情发生之后的结果</strong>”。</p>
+<p>这个不包括“假定”的意思，就是说<strong>前面部分是一定会发生的</strong>。</p>
+<p>这个“结果”的用法，有下面这几种用法。</p>
+<p><strong>・自然现象</strong></p>
+<p><u>北海道では、冬になると雪が降ります。</u></p>
+<p>在北海道，到冬天的话会下雪的。</p>
+<p><strong>・习惯</strong></p>
+<p><u>家に帰ったらまず手を洗います。</u></p>
+<p>我回家了先洗手。</p>
+<p><strong>・发生意外的事情</strong></p>
+<p><u>家に帰ると、猫がいなくなってた。</u></p>
+<p>回家的时候，猫不见了。</p>
+<p>上面三个都不是“假定“，而是真的会发生的事情吧。</p>
+<p>在这个情况下，我们不能用“<strong>なら</strong>”，“<strong>ば</strong>”这个词“自然现象”这个用法的时候一般可以用，其他用法却不能用。因此最好避免使用。</p>
+<p>◯ 北海道では、冬になれば雪が降ります。</p>
+<p>× 家に帰れば、猫がいなくなっていた。</p>
+</li>
+</ul>
+</li>
+<li><p><strong>仮定：ば、たら、なら</strong></p>
+<ul>
+<li><p>这个用法表达的是“<strong>前面部分还不知道会不会发生</strong>”。</p>
+<p>前面部分100%不会发生的情况也可以使用。</p>
+<p>在这个情况下，我们不能用“と”。</p>
+<p>其他三个词意思几乎一样，但是<strong>前面的部分是100%不会发生，或者发生的可能性很少的情况的话，最好用“たら”</strong>。</p>
+<p>相反，标语等含有一般而言的意思的话，最好用“なら”。</p>
+<p>“ば”在这两个词的中间，个人感觉跟“たら”语感更近。</p>
+<p>◯ もし私が鳥だったら、あなたのもとへ飛んでいくだろう</p>
+<p>△ もし私が鳥なら、あなたのもとへ飛んでいくだろう。</p>
+<p>要是我是小鸟，我就会飞到你那边。</p>
+<p>◯ 飲むなら乗るな、乗るなら飲むな</p>
+<p>△ 飲むんだったら乗るな、乗るんだったら飲むな</p>
+<p>如果你要喝酒，不要开车，如果你要开车，不要喝酒</p>
+</li>
+</ul>
+</li>
+<li><p><strong>確実未来：たら</strong></p>
+<ul>
+<li><p>这个用法表达的是“<strong>前面是未来100%会发生的事情</strong>”。</p>
+<p>不会发生的可能性，只要有一点点也就会变成“2. 假定”。</p>
+<p><strong>只有100%会发生的事情才是“確実未来”</strong>，就只能用“たら”了。</p>
+<p>给你举个例子</p>
+<p>◯ 明日雨だったら、家でゆっくりします。</p>
+<p>◯ 明日雨なら、家でゆっくりします。</p>
+<p>如果明天下雨，我就会在家里休息。</p>
+<p>◯ 東京駅に着いたら連絡してください。</p>
+<p>× 東京駅に着くなら連絡してください。</p>
+<p>到了东京站就给我联系吧。</p>
+<p>这两句话的最大的差别，就是前面的事情发生的可能性。</p>
+<p>上面的话，<strong>明天会不会下雨现在无法确定，所以就是“假定”</strong>，因此也能用“なら”。</p>
+<p>相反，下面的情况应该是，<strong>已经约在东京站见面，然后聊怎么集合</strong>吧。</p>
+<p>所以已经确定对方会到东京站，因此是“確実未来”。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="助词"><a href="#助词" class="headerlink" title="助词"></a>助词</h3><h3 id="动词变形"><a href="#动词变形" class="headerlink" title="动词变形"></a>动词变形</h3><ul>
+<li><strong>ます——ません</strong><ul>
+<li>肯定地叙述<strong>现在/未来</strong>的习惯性动作、状态。</li>
+</ul>
+</li>
+<li><strong>ました——ませんでした</strong><ul>
+<li>叙述<strong>过去</strong>的动作。这四种都是礼貌的表达形式。</li>
+</ul>
+</li>
+</ul>
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><ul>
+<li><p><strong>动词 + ながら</strong></p>
+<ul>
+<li>一边。。。一边</li>
+<li><u>音楽を聞きながら作文を書きました。</u></li>
+<li>おんがく     き        さくぶん     か</li>
+<li><strong>一边听音乐，一边写作文</strong></li>
+<li><u>何か飲みながら、話をしましょう。</u></li>
+<li>なに    の    はなし</li>
+<li><strong>一边喝点什么，一边谈话吧</strong></li>
+<li><u>歩きながら食べ<strong>ないでください</strong></u>—-请不要</li>
+<li>ある    た</li>
+<li>请不要一边吃东西一边走路</li>
+</ul>
+</li>
+<li><p><u>行きたかった．しかし行けなかった。</u></p>
+</li>
+<li><p>想去，但没能去。</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>ている</strong></p>
+<ul>
+<li><p>最主要的两个用法就是表达动作的「进行」、动作的「结果的残存」，除此之外也可以表示「习惯」。</p>
+</li>
+<li><p>前面的动词是<strong>非变化动词</strong>，（如「食べる」「飲む」「書く」「読む」等）时，「ている」表达<strong>动作的持续</strong>。<br>当前面的动词是<strong>变化动词</strong>（如「割れる」「壊れる」「死ぬ」「溶ける」等）时，「ている」表达<strong>变化结果的持续</strong>。<br>上面提到的变化动词和非变化动词，都属于「非状态动词」，它们描述的是一个动作或一个事件的发生，而<strong>不是存在状态</strong>。对于「ある・いる」这样的<u>「状态动词」，不能使用「ている」表示持续</u>。</p>
+</li>
+<li><p><u>田中さんは昼ご飯を食べている。</u></p>
+</li>
+<li><p><u>(窗玻璃)窓ガラスが割れている。</u></p>
+</li>
+<li><p>「ている」与「毎〜」「いつも」「ときどき」等表示时间频度的词搭配，也可以表示习惯性动作。习惯性的动作，在做完一次之后，还会反复重复，所以具有「持续」的性质，所以可以使用「ている」表达。</p>
+</li>
+<li><p><strong>田中さんは毎日公園を散歩している</strong></p>
+</li>
+<li></li>
+<li><p>(1) 田中さんは<strong>この3年間</strong>この店で働いている。(進行中)<br>(2) 田中さんは<strong>去年まで3年間</strong>この店で働いている。(経験・経歴)</p>
+<p>第一句中，时间段是「この3年間（这三年）」，而这个时间段一直持续到现在，并没有中断，所以表达的是动作的持续。<br>而第二句因为加上了「去年まで」，强调了动作持续的时间到去年就中止了，和现在所处的时间相互断开，所以表达经验和经验。</p>
+</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://github.com/2021/05/29/%E6%9C%89%E5%9B%BE%E7%89%87%E4%BA%86%E6%B2%A1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Void-Echo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/05/29/%E6%9C%89%E5%9B%BE%E7%89%87%E4%BA%86%E6%B2%A1/" class="post-title-link" itemprop="url">有图片了没?</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2021-05-29 12:43:24 / Modified: 12:52:19" itemprop="dateCreated datePublished" datetime="2021-05-29T12:43:24+08:00">2021-05-29</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="这下该有图片了吧"><a href="#这下该有图片了吧" class="headerlink" title="这下该有图片了吧?"></a>这下该有图片了吧?</h1><p>![这下该有图片了吧](有图片了没/Pictures (1).jpeg)</p>
+<h3 id="内存地址"><a href="#内存地址" class="headerlink" title="内存地址"></a>内存地址</h3><ul>
+<li><p>操作系统具有五个方面的特征：虚拟化 (Virtualization)、并发性 (Concurrency)、异步性、共享性和持久性 (Persistency)。</p>
+<ul>
+<li><p>并发性和共享性可以理解为操作系统支持多个应用程序“同时”运行；异步性可以从操作系统调度、中断处理对应用程序执行造成的影响等几个方面来理解</p>
+</li>
+<li><p>实际上，编译器 (Compiler，比如 gcc) 和链接器 (linker，比如 ld) 也不知道程序每个符号对应的地址应该放在未来程序运行时的哪个物理内存地址中。所以，编译器的一个简单处理办法就是，<strong>设定一个固定地址（比如 0x10000）作为起始地址开始存放代码，代码之后是数据，所有变量和函数的符号都在这个起始地址之后的某个固定偏移位置</strong>。假定程序每次运行都是位于一个不会变化的起始地址。这里的变量指的是全局变量，其地址在编译链接后会确定不变。但局部变量是放在堆栈中的，会随着堆栈大小的动态变化而变化。这里**<u>编译器产生的地址就是虚拟地址</u>**。</p>
+</li>
+<li><p>这里，编译器和链接器图省事，找了一个适合它们的解决办法。当程序要运行的时候，这个符号到机器物理内存的映射必须要解决了，这自然就推到了操作系统身上。操作系统会把编译器和链接器生成的<strong>执行代码和数据放到物理内存中的空闲区域</strong>中，并建立虚拟地址到物理地址的映射关系。由于物理内存中的空闲区域是动态变化的，这也导致虚拟地址到物理地址的映射关系是动态变化的，需要操作系统来维护好可变的映射关系，确保编译器“固定起始地址”的假设成立。只有操作系统维护好了这个映射关系，才能让程序员只需写一些易于人理解的字符串符号来代表一个内存空间地址，且编译器只需确定一个固定地址作为程序的起始地址就可以不用考虑将来这个程序要在哪里运行的问题，从而实现了 <strong>空间虚拟化</strong> 。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="CPU-虚拟化"><a href="#CPU-虚拟化" class="headerlink" title="CPU 虚拟化"></a>CPU 虚拟化</h3><ul>
+<li><p>再来看 CPU 虚拟化。不同的应用程序可以在内存中并发运行，相同的应用程序也可有多个拷贝在内存中并发运行。而每个程序都“认为”自己完全独占了 CPU 在运行，这是”时间虚拟化“。这其实也是操作系统给了运行的应用程序一个幻象。其实是操作系统把时间分成小段，每个应用程序占用其中一小段时间片运行，用完这一时间片后，操作系统会切换到另外一个应用程序，让它运行。由于时间片很短，操作系统的切换开销也很小，人眼基本上是看不出的，反而感觉到多个程序各自在独立”并行“执行，从而实现了 <strong>时间虚拟化</strong> </p>
+</li>
+<li><p>并行 (Parallel) 是指两个或者多个事件在<strong>同一时刻</strong>发生；而并发 (Concurrent) 是指两个或多个事件在<strong>同一时间间隔内</strong>发生。 对于单 CPU 的计算机而言，各个”同时“运行的程序其实是<strong>串行分时复用一个 CPU</strong> ，任一个时刻点上只有一个程序在 CPU 上运行。 这些虚拟性的特征给应用程序的开发和执行提供了非常方便的环境，但也给操作系统的设计与实现提出了很多挑战。</p>
+</li>
+</ul>
+<h3 id="共享性"><a href="#共享性" class="headerlink" title="共享性"></a>共享性</h3><ul>
+<li>共享是指多个应用并发运行时，宏观上体现出它们可同时访问同一个资源，即这个资源可被共享。但其实在微观上，操作系统在硬件等的支持下要确保应用程序互斥或交替访问这个共享的资源。比如两个应用同时访问同一个内存单元，从宏观的应用层面上看，二者都能正确地读出同一个内存单元的内容。而在微观上，操作系统会调度应用程序的先后执行顺序，在数据总线上任何一个时刻，只有一个应用去访问存储单元。</li>
+</ul>
+<h3 id="起步-BOOTLOADER"><a href="#起步-BOOTLOADER" class="headerlink" title="起步, BOOTLOADER"></a>起步, BOOTLOADER</h3><h3 id="VGA-字符缓冲区"><a href="#VGA-字符缓冲区" class="headerlink" title="VGA 字符缓冲区"></a>VGA 字符缓冲区</h3><p>为了在 VGA 字符模式中向屏幕打印字符，我们必须将它写入硬件提供的 <strong>VGA 字符缓冲区</strong>（VGA text buffer）。通常状况下，VGA 字符缓冲区是一个 25 行、80 列的二维数组，它的内容将被实时渲染到屏幕。这个数组的元素被称作<strong>字符单元</strong>（character cell），它使用下面的格式描述一个屏幕上的字符：</p>
+<table>
+<thead>
+<tr>
+<th>Bit(s)</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0-7</td>
+<td>ASCII code point</td>
+</tr>
+<tr>
+<td>8-11</td>
+<td>Foreground color</td>
+</tr>
+<tr>
+<td>12-14</td>
+<td>Background color</td>
+</tr>
+<tr>
+<td>15</td>
+<td>Blink</td>
+</tr>
+</tbody></table>
+<p>其中，<strong>前景色</strong>（foreground color）和<strong>背景色</strong>（background color）取值范围如下：</p>
+<table>
+<thead>
+<tr>
+<th>Number</th>
+<th>Color</th>
+<th>Number + Bright Bit</th>
+<th>Bright Color</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0x0</td>
+<td>Black</td>
+<td>0x8</td>
+<td>Dark Gray</td>
+</tr>
+<tr>
+<td>0x1</td>
+<td>Blue</td>
+<td>0x9</td>
+<td>Light Blue</td>
+</tr>
+<tr>
+<td>0x2</td>
+<td>Green</td>
+<td>0xa</td>
+<td>Light Green</td>
+</tr>
+<tr>
+<td>0x3</td>
+<td>Cyan</td>
+<td>0xb</td>
+<td>Light Cyan</td>
+</tr>
+<tr>
+<td>0x4</td>
+<td>Red</td>
+<td>0xc</td>
+<td>Light Red</td>
+</tr>
+<tr>
+<td>0x5</td>
+<td>Magenta</td>
+<td>0xd</td>
+<td>Pink</td>
+</tr>
+<tr>
+<td>0x6</td>
+<td>Brown</td>
+<td>0xe</td>
+<td>Yellow</td>
+</tr>
+<tr>
+<td>0x7</td>
+<td>Light Gray</td>
+<td>0xf</td>
+<td>White</td>
+</tr>
+</tbody></table>
+<p>每个颜色的第四位称为<strong>加亮位</strong>（bright bit）。</p>
+<p>要修改 VGA 字符缓冲区，我们可以通过<strong>存储器映射输入输出</strong>（<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Memory-mapped_I/O">memory-mapped I/O</a>）的方式，读取或写入地址 <code>0xb8000</code>；这意味着，我们可以像操作普通的内存区域一样操作这个地址。</p>
+<p>需要注意的是，一些硬件虽然映射到存储器，但可能不会完全支持所有的内存操作：可能会有一些设备支持按 <code>u8</code> 字节读取，但在读取 <code>u64</code> 时返回无效的数据。幸运的是，字符缓冲区都<a target="_blank" rel="noopener" href="https://web.stanford.edu/class/cs140/projects/pintos/specs/freevga/vga/vgamem.htm#manip">支持标准的读写操作</a>，所以我们不需要用特殊的标准对待它。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://github.com/2021/05/29/My-First-Page/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Void-Echo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/05/29/My-First-Page/" class="post-title-link" itemprop="url">My First Page</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2021-05-29 10:59:56" itemprop="dateCreated datePublished" datetime="2021-05-29T10:59:56+08:00">2021-05-29</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-05-30 09:08:55" itemprop="dateModified" datetime="2021-05-30T09:08:55+08:00">2021-05-30</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="这是我的第一篇博客"><a href="#这是我的第一篇博客" class="headerlink" title="这是我的第一篇博客!"></a>这是我的第一篇博客!</h1><p>突然发现写博客好像也不是这么麻烦……</p>
+<p><img src="/2021/05/29/My-First-Page/88189924_p1.jpg" alt="88189924_p1"></p>
+<p>随便放一张图吧QAQ</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://github.com/2021/05/29/hello-world/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Void-Echo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/05/29/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2021-05-29 10:44:03" itemprop="dateCreated datePublished" datetime="2021-05-29T10:44:03+08:00">2021-05-29</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">John Doe</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">John Doe</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
