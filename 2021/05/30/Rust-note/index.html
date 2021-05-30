@@ -31,7 +31,7 @@
 <meta property="og:image" content="https://kaisery.github.io/trpl-zh-cn/img/ferris/does_not_compile.svg">
 <meta property="og:image" content="https://kaisery.github.io/trpl-zh-cn/img/ferris/does_not_compile.svg">
 <meta property="article:published_time" content="2021-05-30T08:37:28.000Z">
-<meta property="article:modified_time" content="2021-05-30T08:48:47.030Z">
+<meta property="article:modified_time" content="2021-05-30T08:57:16.189Z">
 <meta property="article:author" content="voidecho">
 <meta property="article:tag" content="Notes">
 <meta name="twitter:card" content="summary">
@@ -185,7 +185,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2021-05-30 16:37:28 / 修改时间：16:48:47" itemprop="dateCreated datePublished" datetime="2021-05-30T16:37:28+08:00">2021-05-30</time>
+              <time title="创建时间：2021-05-30 16:37:28 / 修改时间：16:57:16" itemprop="dateCreated datePublished" datetime="2021-05-30T16:37:28+08:00">2021-05-30</time>
             </span>
 
           
@@ -237,9 +237,9 @@
 <figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fn</span> <span class="title">main</span></span>()&#123;</span><br><span class="line">    <span class="keyword">let</span> condition = <span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">let</span> num = <span class="keyword">if</span> condition &#123;</span><br><span class="line">        <span class="number">5</span></span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="number">6</span></span><br><span class="line">    &#125;;		<span class="comment">//但是各个分支必须相容</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <ul>
-<li><h4 id="从循环返回"><a href="#从循环返回" class="headerlink" title="从循环返回"></a><a target="_blank" rel="noopener" href="https://kaisery.github.io/trpl-zh-cn/ch03-05-control-flow.html#%E4%BB%8E%E5%BE%AA%E7%8E%AF%E8%BF%94%E5%9B%9E">从循环返回</a></h4><p><code>loop</code> 的一个用例是重试可能会失败的操作，比如检查线程是否完成了任务。然而你可能会需要将操作的结果传递给其它的代码。如果将返回值加入你用来停止循环的 <code>break</code> 表达式，它会被停止的循环返回：</p>
-</li>
+<li><h4 id="从循环返回"><a href="#从循环返回" class="headerlink" title="从循环返回"></a><a target="_blank" rel="noopener" href="https://kaisery.github.io/trpl-zh-cn/ch03-05-control-flow.html#%E4%BB%8E%E5%BE%AA%E7%8E%AF%E8%BF%94%E5%9B%9E">从循环返回</a></h4></li>
 </ul>
+<p><code>loop</code> 的一个用例是重试可能会失败的操作，比如检查线程是否完成了任务。然而你可能会需要将操作的结果传递给其它的代码。如果将返回值加入你用来停止循环的 <code>break</code> 表达式，它会被停止的循环返回：</p>
 <figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fn</span> <span class="title">main</span></span>() &#123;</span><br><span class="line">    <span class="keyword">let</span> <span class="keyword">mut</span> counter = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> result = <span class="keyword">loop</span> &#123;</span><br><span class="line">        counter += <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> counter == <span class="number">10</span> &#123;</span><br><span class="line">            <span class="keyword">break</span> counter * <span class="number">2</span>;	<span class="comment">//break后面加数值 + `;`</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;The result is &#123;&#125;&quot;</span>, result);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>  在循环之前，我们声明了一个名为 <code>counter</code> 的变量并初始化为 <code>0</code>。接着声明了一个名为 <code>result</code> 来存放循环的返回值。在循环的每一次迭代中，我们将 <code>counter</code> 变量加 <code>1</code>，接着检查计数是否等于 <code>10</code>。当相等时，使用 <code>break</code> 关键字返回值 <code>counter * 2</code>。循环之后，我们通过分号结束赋值给 <code>result</code> 的语句。最后打印出 <code>result</code> 的值，也就是 20。</p>
@@ -253,11 +253,11 @@
 <ul>
 <li><p>下面是一个使用 <code>for</code> 循环来倒计时的例子，它还使用了一个我们还未讲到的方法，<code>rev</code>，用来反转 range：</p>
 <p>文件名: src/main.rs</p>
-<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fn</span> <span class="title">main</span></span>() &#123;</span><br><span class="line">    <span class="keyword">for</span> number <span class="keyword">in</span> (<span class="number">1</span>..<span class="number">4</span>).rev() &#123;</span><br><span class="line">        <span class="built_in">println!</span>(<span class="string">&quot;&#123;&#125;!&quot;</span>, number);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;LIFTOFF!!!&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>这段代码看起来更帅气不是吗？</p>
 </li>
 </ul>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fn</span> <span class="title">main</span></span>() &#123;</span><br><span class="line">    <span class="keyword">for</span> number <span class="keyword">in</span> (<span class="number">1</span>..<span class="number">4</span>).rev() &#123;</span><br><span class="line">        <span class="built_in">println!</span>(<span class="string">&quot;&#123;&#125;!&quot;</span>, number);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">&quot;LIFTOFF!!!&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>  这段代码看起来更帅气不是吗？</p>
 <h3 id="终于-到了所有权"><a href="#终于-到了所有权" class="headerlink" title="终于, 到了所有权"></a>终于, 到了所有权</h3><h4 id="所有权规则"><a href="#所有权规则" class="headerlink" title="所有权规则"></a>所有权规则</h4><p>首先，让我们看一下所有权的规则。当我们通过举例说明时，请谨记这些规则：</p>
 <blockquote>
 <ol>
@@ -266,6 +266,7 @@
 <li>当所有者（变量）离开作用域，这个值将被丢弃。</li>
 </ol>
 </blockquote>
+<p>断点</p>
 <figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">let</span> s = <span class="built_in">String</span>::from(<span class="string">&quot;hello&quot;</span>);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <h4 id="只在栈上的数据：拷贝"><a href="#只在栈上的数据：拷贝" class="headerlink" title="只在栈上的数据：拷贝"></a>只在栈上的数据：拷贝</h4><p>这里还有一个没有提到的小窍门。这些代码使用了整型并且是有效的，他们是示例 4-2 中的一部分：</p>
