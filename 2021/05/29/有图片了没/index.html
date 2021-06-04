@@ -217,13 +217,14 @@
 
       
         <p><img src="/2021/05/29/%E6%9C%89%E5%9B%BE%E7%89%87%E4%BA%86%E6%B2%A1/image-20210604125552245.png" alt="image-20210604125552245"></p>
-<p><escape><span id="more"></span></escape></p>
+<escape><span id="more"></span></escape>
+
 <h3 id="内存地址"><a href="#内存地址" class="headerlink" title="内存地址"></a>内存地址</h3><ul>
 <li><p>操作系统具有五个方面的特征：虚拟化 (Virtualization)、并发性 (Concurrency)、异步性、共享性和持久性 (Persistency)。</p>
 <ul>
 <li><p>并发性和共享性可以理解为操作系统支持多个应用程序“同时”运行；异步性可以从操作系统调度、中断处理对应用程序执行造成的影响等几个方面来理解</p>
 </li>
-<li><p>实际上，编译器 (Compiler，比如 gcc) 和链接器 (linker，比如 ld) 也不知道程序每个符号对应的地址应该放在未来程序运行时的哪个物理内存地址中。所以，编译器的一个简单处理办法就是，<strong>设定一个固定地址（比如 0x10000）作为起始地址开始存放代码，代码之后是数据，所有变量和函数的符号都在这个起始地址之后的某个固定偏移位置</strong>。假定程序每次运行都是位于一个不会变化的起始地址。这里的变量指的是全局变量，其地址在编译链接后会确定不变。但局部变量是放在堆栈中的，会随着堆栈大小的动态变化而变化。这里**<u>编译器产生的地址就是虚拟地址</u>**。</p>
+<li><p>实际上，编译器 (Compiler，比如 gcc) 和链接器 (linker，比如 ld) 也不知道程序每个符号对应的地址应该放在未来程序运行时的哪个物理内存地址中。所以，编译器的一个简单处理办法就是，<strong>设定一个固定地址（比如 0x10000）作为起始地址开始存放代码，代码之后是数据，所有变量和函数的符号都在这个起始地址之后的某个固定偏移位置</strong>。假定程序每次运行都是位于一个不会变化的起始地址。这里的变量指的是全局变量，其地址在编译链接后会确定不变。但局部变量是放在堆栈中的，会随着堆栈大小的动态变化而变化。这里<strong><u>编译器产生的地址就是虚拟地址</u></strong>。</p>
 </li>
 <li><p>这里，编译器和链接器图省事，找了一个适合它们的解决办法。当程序要运行的时候，这个符号到机器物理内存的映射必须要解决了，这自然就推到了操作系统身上。操作系统会把编译器和链接器生成的<strong>执行代码和数据放到物理内存中的空闲区域</strong>中，并建立虚拟地址到物理地址的映射关系。由于物理内存中的空闲区域是动态变化的，这也导致虚拟地址到物理地址的映射关系是动态变化的，需要操作系统来维护好可变的映射关系，确保编译器“固定起始地址”的假设成立。只有操作系统维护好了这个映射关系，才能让程序员只需写一些易于人理解的字符串符号来代表一个内存空间地址，且编译器只需确定一个固定地址作为程序的起始地址就可以不用考虑将来这个程序要在哪里运行的问题，从而实现了 <strong>空间虚拟化</strong> 。</p>
 </li>
@@ -240,6 +241,7 @@
 <li>共享是指多个应用并发运行时，宏观上体现出它们可同时访问同一个资源，即这个资源可被共享。但其实在微观上，操作系统在硬件等的支持下要确保应用程序互斥或交替访问这个共享的资源。比如两个应用同时访问同一个内存单元，从宏观的应用层面上看，二者都能正确地读出同一个内存单元的内容。而在微观上，操作系统会调度应用程序的先后执行顺序，在数据总线上任何一个时刻，只有一个应用去访问存储单元。</li>
 </ul>
 <h3 id="起步-BOOTLOADER"><a href="#起步-BOOTLOADER" class="headerlink" title="起步, BOOTLOADER"></a>起步, BOOTLOADER</h3><h3 id="VGA-字符缓冲区"><a href="#VGA-字符缓冲区" class="headerlink" title="VGA 字符缓冲区"></a>VGA 字符缓冲区</h3><p>为了在 VGA 字符模式中向屏幕打印字符，我们必须将它写入硬件提供的 <strong>VGA 字符缓冲区</strong>（VGA text buffer）。通常状况下，VGA 字符缓冲区是一个 25 行、80 列的二维数组，它的内容将被实时渲染到屏幕。这个数组的元素被称作<strong>字符单元</strong>（character cell），它使用下面的格式描述一个屏幕上的字符：</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -247,7 +249,8 @@
 <th>Value</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>0-7</td>
 <td>ASCII code point</td>
 </tr>
@@ -263,8 +266,11 @@
 <td>15</td>
 <td>Blink</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <p>其中，<strong>前景色</strong>（foreground color）和<strong>背景色</strong>（background color）取值范围如下：</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -274,7 +280,8 @@
 <th>Bright Color</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>0x0</td>
 <td>Black</td>
 <td>0x8</td>
@@ -322,7 +329,9 @@
 <td>0xf</td>
 <td>White</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <p>每个颜色的第四位称为<strong>加亮位</strong>（bright bit）。</p>
 <p>要修改 VGA 字符缓冲区，我们可以通过<strong>存储器映射输入输出</strong>（<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Memory-mapped_I/O">memory-mapped I/O</a>）的方式，读取或写入地址 <code>0xb8000</code>；这意味着，我们可以像操作普通的内存区域一样操作这个地址。</p>
 <p>需要注意的是，一些硬件虽然映射到存储器，但可能不会完全支持所有的内存操作：可能会有一些设备支持按 <code>u8</code> 字节读取，但在读取 <code>u64</code> 时返回无效的数据。幸运的是，字符缓冲区都<a target="_blank" rel="noopener" href="https://web.stanford.edu/class/cs140/projects/pintos/specs/freevga/vga/vgamem.htm#manip">支持标准的读写操作</a>，所以我们不需要用特殊的标准对待它。</p>
