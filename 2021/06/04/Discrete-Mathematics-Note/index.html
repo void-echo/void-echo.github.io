@@ -32,10 +32,6 @@
 <meta property="og:image" content="https://github.com/2021/06/04/Discrete-Mathematics-Note/image-20210604160129928.png">
 <meta property="og:image" content="https://github.com/2021/06/04/Discrete-Mathematics-Note/image-20210604160139170.png">
 <meta property="og:image" content="https://github.com/2021/06/04/Discrete-Mathematics-Note/image-20210604160207709.png">
-<meta property="og:image" content="https://github.com/2021/06/04/Discrete-Mathematics-Note/image-20210604153852831.png">
-<meta property="og:image" content="https://github.com/2021/06/04/Discrete-Mathematics-Note/image-20210604154149098.png">
-<meta property="og:image" content="https://github.com/2021/06/04/Discrete-Mathematics-Note/image-20210604211920476.png">
-<meta property="og:image" content="https://github.com/2021/06/04/Discrete-Mathematics-Note/image-20210604161838935.png">
 <meta property="og:image" content="https://www.zhihu.com/equation?tex=%5C%5B%5Cforall+a%5Cin+G%2C+a%2C%7Ba%5E2%7D%2C+%5Ccdots+%2C%7Ba%5E%7Bn+%2B+1%7D%7D%5C%5D+">
 <meta property="og:image" content="https://www.zhihu.com/equation?tex=%5C%5B%7Ba%5Es%7D+%3D+%7Ba%5Et%7D%2C%5C%3B1+%5Cleqslant+t+%3C+s+%5Cleqslant+n+%2B+1%5C%5D+">
 <meta property="og:image" content="https://www.zhihu.com/equation?tex=%5C%5B%7Ba%5E%7Bs+-+t%7D%7D+%3D+e%2C%7Ca%7C%5Cleq+s-t.%5C%5D+">
@@ -64,7 +60,7 @@
 <meta property="og:image" content="https://www.zhihu.com/equation?tex=%5C%5B%5Cleft%5Clangle+a+%5Cright%5Crangle++%3D+%5C%7B+%7Ba%5Ek%7D%7Ck+%5Cin+%5Cmathbb%7BZ%7D%5C%7D++%3D+%5C%7B++%5Ccdots+%2C%7Ba%5E%7B+-+2%7D%7D%2C%7Ba%5E%7B+-+1%7D%7D%2C%7Ba%5E0%7D+%3D+e%2C%7Ba%5E1%7D%2C%7Ba%5E2%7D%2C+%5Ccdots+%5C%7D+.%5C%5D+">
 <meta property="og:image" content="https://www.zhihu.com/equation?tex=%5C%5B%5Cleft%5Clangle+a+%5Cright%5Crangle++%3D+%5C%7B+ka%7Ck+%5Cin+%5Cmathbb%7BZ%7D%5C%7D++%3D+%5C%7B++%5Ccdots+%2C%5C%3B+-+2a%2C%5C%3B+-+a%2C%5C%3B0%2C%5C%3Ba%2C%5C%3B2a%2C%5C%3B+%5Ccdots+%5C%7D+.%5C%5D+">
 <meta property="article:published_time" content="2021-06-04T05:50:37.000Z">
-<meta property="article:modified_time" content="2021-06-06T09:06:32.428Z">
+<meta property="article:modified_time" content="2021-06-06T13:25:18.627Z">
 <meta property="article:author" content="voidecho">
 <meta property="article:tag" content="随便写写">
 <meta name="twitter:card" content="summary">
@@ -225,7 +221,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-06-06 17:06:32" itemprop="dateModified" datetime="2021-06-06T17:06:32+08:00">2021-06-06</time>
+                <time title="修改时间：2021-06-06 21:25:18" itemprop="dateModified" datetime="2021-06-06T21:25:18+08:00">2021-06-06</time>
               </span>
 
           
@@ -334,23 +330,25 @@
 <p>如果有一个仅由最小项的析取构成的等值式称为原命题公式的<strong>主析取范式</strong>。</p>
 <p>例 求公式$(p∧q)∨r$的主析取范式及主合取范式。</p>
 <script type="math/tex; mode=display">
-(p∧q)∨r\\
+\begin{aligned}(p∧q)∨r\\
 
-(p∧q∧(r∨┐r))∨((p∨┐p)∧(q∨┐q)∧r)\\
+&=(p∧q∧(r∨┐r))∨((p∨┐p)∧(q∨┐q)∧r)\\
 
-(p∧q∧r)∨(p∧q∧┐r)∨(p∧q∧r)∨(p∧┐q∧r)∨(┐p∧q∧r)∨(┐p∧┐q∧r)
+&=(p∧q∧r)∨(p∧q∧┐r)∨(p∧q∧r)∨(p∧┐q∧r)∨(┐p∧q∧r)∨(┐p∧┐q∧r)
 \\
-(p∧q∧r)∨(p∧q∧┐r)∨(p∧┐q∧r)∨(┐p∧q∧r)∨(┐p∧┐q∧r)\\</script><p>此即所求的主析取范式。另外</p>
+&=(p∧q∧r)∨(p∧q∧┐r)∨(p∧┐q∧r)∨(┐p∧q∧r)∨(┐p∧┐q∧r)\\ \end{aligned}</script><p>此即所求的主析取范式。另外</p>
 <script type="math/tex; mode=display">
+\begin{aligned}
 (p∧q)∨r\\
 
-(p∨r)∧(q∨r)\\
+&=(p∨r)∧(q∨r)\\
 
-(p∨(q∧┐q)∨r)∧((p∧┐p)∨q∨r)\\
+&=(p∨(q∧┐q)∨r)∧((p∧┐p)∨q∨r)\\
 
-(p∨q∨r)∧(p∨┐q∨r)∧(p∨q∨r)∧(┐p∨q∨r)\\
+&=(p∨q∨r)∧(p∨┐q∨r)∧(p∨q∨r)∧(┐p∨q∨r)\\
 
-(p∨q∨r)∧(p∨┐q∨r)∧(┐p∨q∨r)</script><p>最后一式即为所求的主合取范式。</p>
+&=(p∨q∨r)∧(p∨┐q∨r)∧(┐p∨q∨r)
+\end{aligned}</script><p>最后一式即为所求的主合取范式。</p>
 <p><img src="/2021/06/04/Discrete-Mathematics-Note/image-20210604160016765.png" alt="image-20210604160016765"></p>
 <p><img src="/2021/06/04/Discrete-Mathematics-Note/image-20210604160028315.png" alt="image-20210604160028315"></p>
 <p><img src="/2021/06/04/Discrete-Mathematics-Note/image-20210604160038133.png" alt="image-20210604160038133"></p>
@@ -358,20 +356,46 @@
 <p><img src="/2021/06/04/Discrete-Mathematics-Note/image-20210604160129928.png" alt="image-20210604160129928"></p>
 <p><img src="/2021/06/04/Discrete-Mathematics-Note/image-20210604160139170.png" alt="image-20210604160139170"></p>
 <p><img src="/2021/06/04/Discrete-Mathematics-Note/image-20210604160207709.png" alt="image-20210604160207709"></p>
-<h3 id="第二章-集合与关系"><a href="#第二章-集合与关系" class="headerlink" title="第二章 集合与关系"></a>第二章 集合与关系</h3><p><img src="/2021/06/04/Discrete-Mathematics-Note/image-20210604153852831.png" alt="image-20210604153852831"></p>
-<p><img src="/2021/06/04/Discrete-Mathematics-Note/image-20210604154149098.png" alt="image-20210604154149098"></p>
-<p>$A \bigoplus B = (A∪B) - (A∩B)$</p>
+<h3 id="第二章-集合与关系"><a href="#第二章-集合与关系" class="headerlink" title="第二章 集合与关系"></a>第二章 集合与关系</h3><ul>
+<li>例题:化简</li>
+</ul>
+<script type="math/tex; mode=display">
+\begin{aligned}
+&((A \cup B \cup C) \cap(A \cup B)-(A \cup(B-C)) \cap A) \\
+&=(A \cup B)-A \\
+&=(A \cup B) \cap \bar{A} \\
+&=(A \cap \bar{A}) \cup(B \cap \bar{A}) \\
+&=\phi \cup(B \cap \bar{A}) \\
+&=B-A
+\end{aligned}</script><p>$A \oplus B = (A∪B) - (A∩B)$</p>
 <p>$A-B = A∩\overline{B}$</p>
-<p>$(A \bigoplus B)\bigoplus C = A \bigoplus (B\bigoplus C)$</p>
-<p><img src="/2021/06/04/Discrete-Mathematics-Note/image-20210604211920476.png" alt="image-20210604211920476" style="zoom:50%;"></p>
+<p>$(A \oplus B)\oplus C = A \oplus (B\oplus C)$</p>
 <ul>
-<li>不管怎么变, 不管加什么奇怪的永假式, 结果都是这个. </li>
+<li>$A\cup B=A\cup C$, $A \cup B=A \cup C$, 则 $C=B$</li>
 </ul>
+<blockquote>
+<p>$Proof$:</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\mathrm{B}=\mathrm{B} \cup(\bar{A} \cap \mathrm{A})
+&=(\mathrm{B} \cup \bar{A}) \cap(\mathrm{B} \cup \mathrm{A}) \\
+&=(\mathrm{C} \cup \bar{A}) \cap(\mathrm{C} \cup \mathrm{A})\\
+&=\mathrm{C} \cup(\bar{A} \cap \mathrm{A})\\
+&=\mathrm{C}
+\end{aligned}</script><p>逆用分配率。</p>
+<p>不管怎么变, <strong>不管加什么奇怪的永假式</strong>, 结果都是这个. </p>
+</blockquote>
 <h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><ul>
-<li><strong>只有双射函数才有反函数.</strong></li>
-<li></li>
+<li><p><strong>只有双射函数才有反函数.</strong></p>
+</li>
+<li><p>$Proofs$</p>
+</li>
 </ul>
-<p><img src="/2021/06/04/Discrete-Mathematics-Note/image-20210604161838935.png" alt="image-20210604161838935"></p>
+<blockquote>
+<p>Suppose that $f: A \rightarrow B$ :<br>To show that $f$ is injective 单射: Show that if $f(x)=f(y)$ for arbitrary $x, y \in A$, then $x=y .$</p>
+<p>To show that $f$ is not injective 不是单射: Find particular elements $x, y \in A$ such that $x \neq y$ and $f(x)=f(y)$</p>
+<p>To show that $f$ is surjective 满射: Consider an arbitrary element $y \in B$ and find an element $x \in A$ such that $f(x)=y$<br>To show that $f$ is not surjective 不是满射: Find a particular $y \in B$ such that $f(x) \neq y$ for all $x \in A$</p>
+</blockquote>
 <h3 id="代数结构1"><a href="#代数结构1" class="headerlink" title="代数结构1"></a>代数结构1</h3><ul>
 <li>$<G,\ ·>$是一个群, $<H,\ *>$ 是任意代数结构, 如果存在 $G $ 到 $H $ 的满同态 $f$ ,  证明$<H,\ *>$  是群.</H,\></H,\></G,\></li>
 </ul>
@@ -382,9 +406,9 @@
 <p>$y^{-1} = f(x)^{-1} = f(x^{-1}) $</p>
 <p>所以$<H,\ *>$ 是群.</H,\></p>
 </blockquote>
-<h3 id="代数结构2"><a href="#代数结构2" class="headerlink" title="代数结构2"></a>代数结构2</h3><p><strong>$ &lt; G, ·&gt; $是有限半群，且消去律成立，证明 G 是群。</strong></p>
+<h3 id="代数结构2"><a href="#代数结构2" class="headerlink" title="代数结构2"></a>代数结构2</h3><h4 id="半群-amp-群"><a href="#半群-amp-群" class="headerlink" title="半群 &amp; 群"></a>半群 &amp; 群</h4><p><strong>$ &lt; G, ·&gt; $是有限半群，且消去律成立，证明 G 是群。</strong></p>
 <blockquote>
-<p>Proof</p>
+<p>$Proof$</p>
 <p>$\quad \forall a \in G$, 有 $a^{-1} \in G$ 使 $a^{-1} a=e$, 又对 $a^{-1} \in G$, 应有 $\left(a^{-1}\right)^{-1} \in G$ 使</p>
 <script type="math/tex; mode=display">
 \begin{aligned}
@@ -404,22 +428,23 @@ a a^{-1} &=e\left(a a^{-1}\right) \\
 a^{-1} a=a a^{-1}=e .\\故\ G\ 为群</script></blockquote>
 <p><strong>设 $&lt; G, *&gt;$ 是一个半群，如果 $\quad \forall a, b \in G$, 方程</strong><br><strong>$a x=b, \quad y a=b$</strong><br><strong>在 $G$ 中总有解，则 $G$ 是一个群.</strong></p>
 <blockquote>
-<p>Proof</p>
+<p>$Proof$</p>
 <p>先证 $G$ 有左单位元, 为此，任取 $b \in G$ 令 $y b=b$ 的一个解为 $e$, 则 $e b=b .$<br>下证 $e$ 即为左单位元.<br>$\forall a \in G$<br>设 $b x=a$ 的解为 $c, \quad$ 即 $\quad b c=a$<br>则 $\quad e a=e(b c)=(e b) c=b c=a$<br>从而知 $e$ 为左单位元.<br>再者，任取 $a \in G, y a=e$ 有解，设 $a^{\prime}$ 为一解，则 $a^{\prime} a=e$, 即 $a^{\prime}$ 是 $a$ 的左逆元，这就是 说， $\forall a \in G, a$ 均有左逆元，由定理 4 可知， $G$ 是群.</p>
 <p><strong>评价: 左单位元难找, 左逆元好找.</strong> </p>
 </blockquote>
-<h4 id="有限半群若消去律成立则必为群"><a href="#有限半群若消去律成立则必为群" class="headerlink" title="有限半群若消去律成立则必为群"></a>有限半群若消去律成立则必为群</h4><blockquote>
-<p>Proof</p>
+<p><strong>有限半群若消去律成立则必为群</strong></p>
+<blockquote>
+<p>$Proof$</p>
 <p>因为 G 有限,设$G={a1,…,an}$,任取a,b∈G,只需证明 ax=b和xa=b 有解即可.<br>因为半群对运算封闭,所以$aa_1,…,aa_n∈G$.这n个元素必然两两不等,否则若$aa_i=aa_j(i≠j)$,根据消去律,$a_i=a_j$,矛盾.<br>所以$aa_1,…,aa_n$是$a1,…,an$的一个排列,而 $b∈G$ ,所以必存在一个$a_i(1≤i≤n)$,使得 $aa_i=b$ </p>
 <p>所以ax=b有解,同理xa=b有解.</p>
 <p>Q.E.D</p>
 </blockquote>
-<ol>
+<h4 id="群与阶"><a href="#群与阶" class="headerlink" title="群与阶"></a>群与阶</h4><ol>
 <li><p>元素的阶并非循环群里面才有的概念.</p>
 </li>
 <li><p><strong>一般的群也有阶</strong>. 一个群的阶是指其势，即其元素的个数</p>
 </li>
-<li><p>群里面的元素都有阶的, 但是有的是 $\infin$ 的.</p>
+<li><p>群里面的元素都有阶的, 但是有的是 $\infty $ 的.</p>
 </li>
 <li>元素的阶是不可能为0的</li>
 </ol>
@@ -428,7 +453,7 @@ a^{-1} a=a a^{-1}=e .\\故\ G\ 为群</script></blockquote>
 <li>设 $a \in G$, 且若存在 $m \in Z^{+}$ 使 $a^{m}=e \Rightarrow|a|=n&lt;+\infty, \quad$且 $n \mid m($ 但不能保证 $n=m)$ 。</li>
 </ul>
 <blockquote>
-<p>Proof:</p>
+<p>$Proof$:</p>
 <script type="math/tex; mode=display">
 \begin{array}{l}
 \text {由整数的带余除法知, } \exists g, r \in Z \text { 使 } m=n g+r, \quad r=0 \text { 或者 }
@@ -441,7 +466,7 @@ a^{-1} a=a a^{-1}=e .\\故\ G\ 为群</script></blockquote>
 <li><strong>群元素和其逆元的阶一样.</strong></li>
 </ul>
 <blockquote>
-<p>Proof</p>
+<p>$Proof$</p>
 <p>证明 设群G的元素a与 $a^{-1}$ 的阶分别为m, $n$,<br>由于 $a^{m}=e, \quad$ 于是 $\left(a^{-1}\right)^{m}=\left(a^{m}\right)^{-1}=e^{-1}=e$,<br>由性质1， $n | m$, 而</p>
 <script type="math/tex; mode=display">
 a^{n}=\left[\left(a^{-1}\right)^{-1}\right]^{n}=\left[\left(a^{-1}\right)^{n}\right]^{-1}=e^{-1}=e,</script><p>于是 $m | n$ , 因此， $m=n$ 。</p>
@@ -451,7 +476,7 @@ a^{n}=\left[\left(a^{-1}\right)^{-1}\right]^{n}=\left[\left(a^{-1}\right)^{n}\ri
 </ul>
 <blockquote>
 <p>分析：阶为的元素只有一个，是单位元e。要证明阶为2的元素有奇数个，只要证明阶大于2的元素有偶数个即可。</p>
-<p>Proof<br>设a的阶为 $k\ ＞\ 2$ ，则a的逆元的阶也是k，且$a≠a^{-1}$。若$a=a^{-1}$，则$a^2=e$，与 $a$ 的阶  $k\ ＞\ 2$ 矛盾。所以阶大于2的元素一定是成对出现，有偶数个。<br>阶为1的元素只有一个，是单位元e。<br>$G$的元素个数是偶数，所以阶为2的元素一定有奇数个。</p>
+<p>$Proof$<br>设a的阶为 $k\ ＞\ 2$ ，则a的逆元的阶也是k，且$a≠a^{-1}$。若$a=a^{-1}$，则$a^2=e$，与 $a$ 的阶  $k\ ＞\ 2$ 矛盾。所以阶大于2的元素一定是成对出现，有偶数个。<br>阶为1的元素只有一个，是单位元e。<br>$G$的元素个数是偶数，所以阶为2的元素一定有奇数个。</p>
 </blockquote>
 <ul>
 <li><strong>如果群G的阶为偶数,则G必有2阶元</strong></li>
@@ -469,7 +494,7 @@ a^{n}=\left[\left(a^{-1}\right)^{-1}\right]^{n}=\left[\left(a^{-1}\right)^{n}\ri
 <li><strong>有限群中每个元素的阶都有限。</strong></li>
 </ul>
 <blockquote>
-<p>Proof：</p>
+<p>$Proof$：</p>
 <p>处理有限群的方法我们用过很多遍了，</p>
 <p>就是形式地写出很多个元素，其中必有相等的元。例如此定理：</p>
 <p> <img src="https://www.zhihu.com/equation?tex=%5C%5B%5Cforall+a%5Cin+G%2C+a%2C%7Ba%5E2%7D%2C+%5Ccdots+%2C%7Ba%5E%7Bn+%2B+1%7D%7D%5C%5D+" alt="[公式]"> </p>
@@ -495,7 +520,7 @@ a^{n}=\left[\left(a^{-1}\right)^{-1}\right]^{n}=\left[\left(a^{-1}\right)^{n}\ri
 </li>
 </ul>
 <blockquote>
-<p>Proof:</p>
+<p>$Proof$:</p>
 <p>为了方便书写，设 <img src="https://www.zhihu.com/equation?tex=%5C%5B%28k%2Cn%29+%3D+d%2C~n+%3D+d%7Bn_1%7D%5C%3B%2Ck+%3D+d%7Bk_1%7D%2C%5C%3B%28%7Bn_1%7D%2C%7Bk_1%7D%29+%3D+1.%5C%5D" alt="[公式]"><br>(1) <img src="https://www.zhihu.com/equation?tex=%5C%5B%7B%28%7Ba%5Ek%7D%29%5E%7B%7Bn_1%7D%7D%7D+%3D+%7Ba%5E%7Bk%7Bn_1%7D%7D%7D+%3D+%7Ba%5E%7Bn%7Bk_1%7D%7D%7D+%3D+%7B%28%7Ba%5En%7D%29%5E%7B%7Bk_1%7D%7D%7D+%3D+e.%5C%5D" alt="[公式]"><br>(2) 设还有 <img src="https://www.zhihu.com/equation?tex=%5C%5B%7B%28%7Ba%5Ek%7D%29%5Em%7D%3Da%5E%7Bkm%7D+%3D+e%5C%5D" alt="[公式]"> ，由定理2， <img src="https://www.zhihu.com/equation?tex=%5C%5Bn%7Ckm%2C%5C%3B%5C%3B%7Bn_1%7D%7C%7Bk_1%7Dm.%5C%5D" alt="[公式]"> 而 <img src="https://www.zhihu.com/equation?tex=%5C%5B%28%7Bn_1%7D%2C%7Bk_1%7D%29+%3D+1%2C%5C%5D" alt="[公式]"> 故 <img src="https://www.zhihu.com/equation?tex=%5C%5B%7Bn_1%7D%7Cm%5C%5D" alt="[公式]"> ，从而 <img src="https://www.zhihu.com/equation?tex=%5C%5B%7Bn_1%7D%5Cleq+m%5C%5D" alt="[公式]"> , <img src="https://www.zhihu.com/equation?tex=n_1" alt="[公式]"> 是 <img src="https://www.zhihu.com/equation?tex=a%5Ek" alt="[公式]"> 的阶。</p>
 <p><strong>推论1：设|a|=st, 则</strong> <img src="https://www.zhihu.com/equation?tex=%7Ca%5Es+%7C%3Dt" alt="[公式]"> <strong>, 其中s,t 是正整数。</strong></p>
 <p>看似显而易见的</p>
@@ -525,7 +550,7 @@ a^{n}=\left[\left(a^{-1}\right)^{-1}\right]^{n}=\left[\left(a^{-1}\right)^{n}\ri
 <p><strong>运算用加法表示时：</strong> <img src="https://www.zhihu.com/equation?tex=%5C%5B%5Cleft%5Clangle+a+%5Cright%5Crangle++%3D+%5C%7B+ka%7Ck+%5Cin+%5Cmathbb%7BZ%7D%5C%7D++%3D+%5C%7B++%5Ccdots+%2C%5C%3B+-+2a%2C%5C%3B+-+a%2C%5C%3B0%2C%5C%3Ba%2C%5C%3B2a%2C%5C%3B+%5Ccdots+%5C%7D+.%5C%5D+" alt="[公式]"></p>
 <p>有限群中每个元素的阶都整除群的阶。</p>
 <blockquote>
-<p>Proof:</p>
+<p>$Proof$:</p>
 </blockquote>
 <p><strong>设 $\langle G, <em>\rangle$ 是一个循环群，若 $G$ 是无限群，则 $\langle G, </em>\rangle \cong\langle\mathbf{Z},+\rangle$, 若 $G$</strong><br><strong>是 $n$ 阶群，则 $\langle G, *\rangle \cong\left\langle\mathbf{Z}_{n},+_{n}\right\rangle .$</strong></p>
 <blockquote>
@@ -551,7 +576,7 @@ f\left([i]+_{n}[j]\right) &=f([i+j])=a^{i+j}=a^{i *} a^{j} \\
 &=f([i]) * f([j])
 \end{aligned}</script><p>因此 $\quad f: \quad \mathbf{Z}_{n} \cong G .$</p>
 </blockquote>
-<h4 id="环-amp-域"><a href="#环-amp-域" class="headerlink" title="环 &amp; 域"></a>环 &amp; 域</h4><blockquote>
+<h4 id="环"><a href="#环" class="headerlink" title="环"></a>环</h4><blockquote>
 <p><strong>a  *  0 = 0 并不是理所当然的事情. 它是从 0 + 0 = 0 推断出来的.</strong>  </p>
 </blockquote>
 <ul>
@@ -562,7 +587,7 @@ f\left([i]+_{n}[j]\right) &=f([i+j])=a^{i+j}=a^{i *} a^{j} \\
 <li>$(-a)(-b) = ab$</li>
 </ul>
 <blockquote>
-<p>Proof</p>
+<p>$Proof$</p>
 <p> $\forall a \in R$ 由于 $0+0=0 \quad$ 所以 $a(0+0)=a\ 0$, 由分配律得</p>
 <script type="math/tex; mode=display">
 a 0+a 0=a 0+0</script><p>现利用消去律，即有 $a 0=0$, 同理 $0 a=0$, ( 9 ) 式得证.</p>
@@ -579,14 +604,59 @@ a 0+a 0=a 0+0</script><p>现利用消去律，即有 $a 0=0$, 同理 $0 a=0$, ( 
 </li>
 <li><p>显然，有1的环R中所有可逆元在乘法运算下构成一个群，该群记为$R^*$，并称为环$R$的乘法群.</p>
 </li>
-<li><p>零环对我们来说意义不大，以后<strong>除非特别说明</strong>，当提到有单位元的环时，总指非零环．因此<strong>1≠0总成立</strong>.</p>
+<li><p>零环对我们来说意义不大，以后<strong>除非特别说明</strong>，当提到有单位元的环时，总指非零环．因此  <strong>$1≠0$总成立</strong>.</p>
+</li>
+<li><p><strong>若 $R$ 是无零因子的环, 则 $R$ 中消去律成立 </strong></p>
 </li>
 </ul>
-<p><strong>有单位元, 无零因子的 交换 环是整环.</strong></p>
 <blockquote>
-<p>还真不一定是Abel的. 只是交换而已. 单位元都不一定有. </p>
+<p>$Proof$: 略</p>
 </blockquote>
-<p>定义 3 设 $R$ 是一个<strong>有 1 的环</strong>， $\hat{R}=R-\{0\} \neq \emptyset$, 如果 $\langle\ \hat{R}, \ \cdot\ \ \rangle$ 是一个群，则称 $R$ 为<strong>除环</strong>，<strong>可交换的除环称为域</strong>.</p>
+<ul>
+<li><strong>有单位元, 无零因子的<u>交换环</u>是整环.</strong></li>
+</ul>
+<blockquote>
+<p>还真不一定是 $Abel$ 的. 只是交换而已. 单位元都不一定有. </p>
+<p><u>整环条件一般, 有 1 没 0 因子且需要<strong>交换</strong>.</u> </p>
+</blockquote>
+<ul>
+<li>设 $R$ 是一个<strong>有 1 的环</strong>， $\hat{R}=R-\{0\} \neq \emptyset$, 如果 $\langle\ \hat{R}, \ \cdot\ \ \rangle$ <strong>是一个群</strong>，则称 $R$ 为<strong>除环</strong>，<strong>可交换的除环称为域</strong>.</li>
+</ul>
+<blockquote>
+<p><u>除环条件宽松, 有 1 没 0 因子且<strong>去 0 是群</strong>即可.</u></p>
+</blockquote>
+<ul>
+<li><strong>设 $R$ 是一个没有零因子的有限环, 且 $|R|\ge 2$ , 则 $R$ 必为除环.</strong> </li>
+</ul>
+<blockquote>
+<p>$Proof$</p>
+<p>根据除环的定义，我们需要证明 $\langle\hat{R}$,  $\cdot\ \rangle$ 为群. </p>
+<p>由于 $|R| \geq 2$, 故 $\hat{R}$ 非空</p>
+<p>且 $R$ 中不含零因子，故 $\hat{R}$ 对  $\cdot $  封闭，从而 $\langle\hat{R}$,  $\cdot\ \rangle$ 必构成半群，</p>
+<p>且由定理 1 知，在该半群中消去律成立，</p>
+<p>从而 $\langle\hat{R}$,  $\cdot\ \rangle$  是一个满足消去律的有限半群，故必为群。从而 $R$ 是除环.</p>
+</blockquote>
+<ul>
+<li><strong>有限的整环一定是域</strong></li>
+</ul>
+<blockquote>
+<p>$Proof$</p>
+<p>有限半群若消去律成立则必为群</p>
+</blockquote>
+<h4 id="域"><a href="#域" class="headerlink" title="域"></a>域</h4><p><strong>定理 1 设 $\langle F$,  $+$ ,  $\cdot\ \  \rangle$ 是一个域，则:</strong><br><strong>( 1 ) 在加法群 $\langle F,+\rangle$ 中，每个非零元都具有同样的周期（阶）.</strong><br><strong>( 2 ) 如果 $\langle F,+\rangle$ 中非零元素的周期为有限数 $p$,</strong><br><strong>则 $p$ 必为素数.</strong></p>
+<blockquote>
+<p>$Proof$</p>
+<p>( 1 ) $\forall a \in F$, 设 $a \neq 0$, 用 $e$ 表示 $F$ 的单位元，则:</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+n a &=a+a+\ldots+a\\&=e a+e a+\ldots+e a\\&=(e+e+\ldots+e) a \\
+&=(n e) a
+\end{aligned}</script><p>由于 $a \neq 0$ ，且域中无零因子，故</p>
+<script type="math/tex; mode=display">
+n a=0 \Leftrightarrow(n e) a=0 \Leftrightarrow \quad n e=0</script><p>由此可见， $a$ 的加法周期与单位元 $e$ 相同，从而知 $F$ 中任何非零元素的加法周期均相同，以后经常用单位元原周期代表这个共同值.<br>( 2 ) 设 $F$ 中非零元素的周期为有限数 $p$, 则 $p&gt;1$. 如果 $p$ 不是素数，则必有<br>$p_{1}, p_{2} \in \mathbf{N} \quad$ 使 $p=p_{1} p_{2}, \quad 1&lt;p_{1} \leq p_{2}&lt;p .$ 于是</p>
+<script type="math/tex; mode=display">
+p e=\left(p_{1} p_{2}\right) e=p_{1}\left(p_{2} e\right)=\left(p_{1} e\right)\left(p_{2} e\right)</script><p>故由 $p e=0$ 知 <strong>$\left(p_{1} e\right)\left(p_{2} e\right)=0$, 由于域 $F$ 中无零因子，因此 $p_{1} e=0$ 或 $p_{2} e=0$,</strong> 与<br>$e$ 的周期为 $p$ 矛盾. 故 $p$ 必为素数.</p>
+</blockquote>
 
     </div>
 
@@ -690,7 +760,7 @@ a 0+a 0=a 0+0</script><p>现利用消去律，即有 $a 0=0$, 同理 $0 a=0$, ( 
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E9%80%BB%E8%BE%91%E4%B8%8E%E8%AF%81%E6%98%8E"><span class="nav-number">1.</span> <span class="nav-text">第一章 逻辑与证明</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%8C%83%E5%BC%8F"><span class="nav-number">1.1.</span> <span class="nav-text">范式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9C%80%E5%B0%8F%E9%A1%B9"><span class="nav-number">1.2.</span> <span class="nav-text">最小项</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%BB%E6%9E%90%E5%8F%96%E8%8C%83%E5%BC%8F"><span class="nav-number">1.3.</span> <span class="nav-text">主析取范式</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E9%9B%86%E5%90%88%E4%B8%8E%E5%85%B3%E7%B3%BB"><span class="nav-number">2.</span> <span class="nav-text">第二章 集合与关系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%BD%E6%95%B0"><span class="nav-number">3.</span> <span class="nav-text">函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E6%95%B0%E7%BB%93%E6%9E%841"><span class="nav-number">4.</span> <span class="nav-text">代数结构1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E6%95%B0%E7%BB%93%E6%9E%842"><span class="nav-number">5.</span> <span class="nav-text">代数结构2</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9C%89%E9%99%90%E5%8D%8A%E7%BE%A4%E8%8B%A5%E6%B6%88%E5%8E%BB%E5%BE%8B%E6%88%90%E7%AB%8B%E5%88%99%E5%BF%85%E4%B8%BA%E7%BE%A4"><span class="nav-number">5.1.</span> <span class="nav-text">有限半群若消去律成立则必为群</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BE%AA%E7%8E%AF%E7%BE%A4"><span class="nav-number">5.2.</span> <span class="nav-text">循环群</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%8E%AF-amp-%E5%9F%9F"><span class="nav-number">5.3.</span> <span class="nav-text">环 &amp; 域</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E9%80%BB%E8%BE%91%E4%B8%8E%E8%AF%81%E6%98%8E"><span class="nav-number">1.</span> <span class="nav-text">第一章 逻辑与证明</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%8C%83%E5%BC%8F"><span class="nav-number">1.1.</span> <span class="nav-text">范式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9C%80%E5%B0%8F%E9%A1%B9"><span class="nav-number">1.2.</span> <span class="nav-text">最小项</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%BB%E6%9E%90%E5%8F%96%E8%8C%83%E5%BC%8F"><span class="nav-number">1.3.</span> <span class="nav-text">主析取范式</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E9%9B%86%E5%90%88%E4%B8%8E%E5%85%B3%E7%B3%BB"><span class="nav-number">2.</span> <span class="nav-text">第二章 集合与关系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%BD%E6%95%B0"><span class="nav-number">3.</span> <span class="nav-text">函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E6%95%B0%E7%BB%93%E6%9E%841"><span class="nav-number">4.</span> <span class="nav-text">代数结构1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E6%95%B0%E7%BB%93%E6%9E%842"><span class="nav-number">5.</span> <span class="nav-text">代数结构2</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8D%8A%E7%BE%A4-amp-%E7%BE%A4"><span class="nav-number">5.1.</span> <span class="nav-text">半群 &amp; 群</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BE%A4%E4%B8%8E%E9%98%B6"><span class="nav-number">5.2.</span> <span class="nav-text">群与阶</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BE%AA%E7%8E%AF%E7%BE%A4"><span class="nav-number">5.3.</span> <span class="nav-text">循环群</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%8E%AF"><span class="nav-number">5.4.</span> <span class="nav-text">环</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9F%9F"><span class="nav-number">5.5.</span> <span class="nav-text">域</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
