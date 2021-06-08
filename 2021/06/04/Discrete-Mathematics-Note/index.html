@@ -25,6 +25,7 @@
 <meta property="og:url" content="https://github.com/2021/06/04/Discrete-Mathematics-Note/index.html">
 <meta property="og:site_name" content="Void-Echo">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://github.com/2021/06/04/Discrete-Mathematics-Note/image-20210608171742884.png">
 <meta property="og:image" content="https://www.zhihu.com/equation?tex=%5C%5B%5Cforall+a%5Cin+G%2C+a%2C%7Ba%5E2%7D%2C+%5Ccdots+%2C%7Ba%5E%7Bn+%2B+1%7D%7D%5C%5D+">
 <meta property="og:image" content="https://www.zhihu.com/equation?tex=%5C%5B%7Ba%5Es%7D+%3D+%7Ba%5Et%7D%2C%5C%3B1+%5Cleqslant+t+%3C+s+%5Cleqslant+n+%2B+1%5C%5D+">
 <meta property="og:image" content="https://www.zhihu.com/equation?tex=%5C%5B%7Ba%5E%7Bs+-+t%7D%7D+%3D+e%2C%7Ca%7C%5Cleq+s-t.%5C%5D+">
@@ -56,11 +57,11 @@
 <meta property="og:image" content="https://www.zhihu.com/equation?tex=%5C%5B%5Cleft%5Clangle+a+%5Cright%5Crangle++%3D+%5C%7B+%7Ba%5Ek%7D%7Ck+%5Cin+%5Cmathbb%7BZ%7D%5C%7D++%3D+%5C%7B++%5Ccdots+%2C%7Ba%5E%7B+-+2%7D%7D%2C%7Ba%5E%7B+-+1%7D%7D%2C%7Ba%5E0%7D+%3D+e%2C%7Ba%5E1%7D%2C%7Ba%5E2%7D%2C+%5Ccdots+%5C%7D+.%5C%5D+">
 <meta property="og:image" content="https://www.zhihu.com/equation?tex=%5C%5B%5Cleft%5Clangle+a+%5Cright%5Crangle++%3D+%5C%7B+ka%7Ck+%5Cin+%5Cmathbb%7BZ%7D%5C%7D++%3D+%5C%7B++%5Ccdots+%2C%5C%3B+-+2a%2C%5C%3B+-+a%2C%5C%3B0%2C%5C%3Ba%2C%5C%3B2a%2C%5C%3B+%5Ccdots+%5C%7D+.%5C%5D+">
 <meta property="article:published_time" content="2021-06-04T05:50:37.000Z">
-<meta property="article:modified_time" content="2021-06-07T15:15:21.798Z">
+<meta property="article:modified_time" content="2021-06-08T12:35:45.794Z">
 <meta property="article:author" content="voidecho">
 <meta property="article:tag" content="随便写写">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://www.zhihu.com/equation?tex=%5C%5B%5Cforall+a%5Cin+G%2C+a%2C%7Ba%5E2%7D%2C+%5Ccdots+%2C%7Ba%5E%7Bn+%2B+1%7D%7D%5C%5D+">
+<meta name="twitter:image" content="https://github.com/2021/06/04/Discrete-Mathematics-Note/image-20210608171742884.png">
 
 <link rel="canonical" href="https://github.com/2021/06/04/Discrete-Mathematics-Note/">
 
@@ -217,7 +218,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-06-07 23:15:21" itemprop="dateModified" datetime="2021-06-07T23:15:21+08:00">2021-06-07</time>
+                <time title="修改时间：2021-06-08 20:35:45" itemprop="dateModified" datetime="2021-06-08T20:35:45+08:00">2021-06-08</time>
               </span>
 
           
@@ -374,6 +375,46 @@
 \end{aligned}</script><p>逆用分配率。</p>
 <p>不管怎么变, <strong>不管加什么奇怪的永假式</strong>, 结果都是这个. </p>
 </blockquote>
+<ul>
+<li>Suppose that $R$  , $S$ are the relations from $A $  to $B$, $T$ is the relation from $B$ to $C$ ,  $ P$ is the relation from $C$ to $D$ , then </li>
+</ul>
+<p>(1) $(R \cup S)^{-1}=R^{-1} \cup S^{-1}$<br>(2) $(R \cap S)^{-1}=R^{-1} \cap S^{-1}$<br>(3) $(\bar{R})^{-1}=\overline{R^{-1}}$<br>(4) $ (R-S)^{-1}=R^{-1}-S^{-1}$<br>(5) $(A \times B)^{-1}=B \times A$<br><strong>(6)</strong>  $\bar{R}=A \times B-R$<br>(7) $(S \circ T)^{-1}=T^{-1} \circ S^{-1}$<br>(8) $(R \circ T) \circ P=R \circ(T \circ P)$<br>(9) $(R \cup S) \circ T=R \circ T \cup S \circ T$</p>
+<p><strong>关系的复合运算不满足交换律</strong> </p>
+<p>自反闭包:  $R\ \cup \ I_A $ </p>
+<p>对称闭包: $R\ \cup \ R^{-1} $ </p>
+<script type="math/tex; mode=display">
+\text { If }|A|=n \quad, \text { then } t(R)=R^{*}=R \cup R^{2} \cup \cdots \cup R^{n}</script><p>传递闭包: $R^{*}=\bigcup_{n=1}^{\infty} R^{n} \subseteq R^{\prime}$</p>
+<p><strong>容斥原理</strong></p>
+<script type="math/tex; mode=display">
+|A \cup B|=|A|+|B|-|A \cap B|</script><p><strong>无穷可数的集合的势</strong>是 $\aleph_0$ </p>
+<p>Prove that $P(A) ⊆ P(B)$ if and only if $A ⊆ B$.</p>
+<blockquote>
+<p>$Proof$</p>
+<p>Suppose first that $\wp(A)\subseteq\wp(B)$. $A\subseteq A$, so $A\in\wp(A)\subseteq\wp(B)$, so $A\in\wp(B)$, and hence $A\subseteq B$.</p>
+<p>Now suppose that $A\subseteq B$. Then for any $X\in\wp(A)$ we have $X\subseteq A\subseteq B$, so $X\subseteq B$, and therefore $X\in\wp(B)$. Thus, $\wp(A)\subseteq\wp(B)$.</p>
+<p><strong>题目</strong></p>
+<p>设A={1,2,…,10}。下列哪个是A的划分？若是划分，则它们诱导的等价关系是什么？</p>
+<p>（1）B=\{\{1,3,6\},\{2,8,10\},\{4,5,7\}\};</p>
+<p>（2）C=\{\{1,5,7\},\{2,4,8,9\},\{3,5,6,10\}\};</p>
+<p>（3）D=\{\{1,2,7\},\{3,5,10\},\{4,6,8\},\{9\}\};</p>
+<p>解：</p>
+<p>（1）和（2）都不是A的划分。（1）并起来不是A，（2）其中的集合有交集。</p>
+<p>（3）是A的划分。其诱导的等价关系是</p>
+<p>$I_A$ ∪ {<1,2>,<2,1>,<1,7>,<7,1>,<2,7>,<7,2>,<3,5>,<5,3>,<3,10>,</3,10></5,3></3,5></7,2></2,7></7,1></1,7></2,1></1,2></p>
+<p><10,3>,<10,5>,<5,10>,<4,6>,<6,4>,<4,8>,<8,4>,<6,8>,<8,6>}。</8,6></6,8></8,4></4,8></6,4></4,6></5,10></10,5></10,3></p>
+<p>划分找等价类就是<strong>划分中每个集合和自身做笛卡尔积</strong>，<strong>所有集合笛卡尔积结果求并</strong>。</p>
+<hr>
+<p>评价: 划分本身是集合的集合. 小集合是元素的集合.</p>
+<p>别忘了 $I_A$ </p>
+</blockquote>
+<p><img src="/2021/06/04/Discrete-Mathematics-Note/image-20210608171742884.png" alt="image-20210608171742884"></p>
+<blockquote>
+<p>首先明确左右两侧分别是什么意思。</p>
+<p>左侧是：$(x,y)$   其中$x$ 属于$A$不属于$B$，$y$属于$C$。</p>
+<p>右侧是：$(x,y) $    属于$A×C$但不属于$B×C$。</p>
+<p>然后从左化简向右侧的含义构造，证明。</p>
+<p>第三步是精髓，第四部前两个看为一个整体，逆用分配率。</p>
+</blockquote>
 <h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><ul>
 <li><p><strong>只有双射函数才有反函数.</strong></p>
 </li>
@@ -386,9 +427,11 @@
 <p>To show that $f$ is surjective 满射: Consider an arbitrary element $y \in B$ and find an element $x \in A$ such that $f(x)=y$</p>
 <p>To show that $f$ is not surjective 不是满射: Find a particular $y \in B$ such that $f(x) \neq y$ for all $x \in A$</p>
 </blockquote>
-<h3 id="代数结构1"><a href="#代数结构1" class="headerlink" title="代数结构1"></a>代数结构1</h3><ul>
-<li>$<G,\ \cdot>$是一个群, $<H,\ \ast>$ 是任意代数结构, 如果存在 $G $ 到 $H $ 的满同态 $f$ ,  证明$<H,\ \ast>$  是群.</H,\></H,\></G,\></li>
-</ul>
+<p> $A$ 到 $B$ 的函数共有 $nm$ 个，或说有$| B | ^{| A |}$个</p>
+<p> 以后用 $B^A$ 表示所有 $A$ 到 $B$ 的函数构成的集合（ $A$ , $B$ 可以是无限集）</p>
+<p>$\lfloor\boldsymbol{x}\rfloor=\boldsymbol{n}$ if and only if $n \leq \boldsymbol{x}&lt;\boldsymbol{n}+\mathbf{1}$ where $\boldsymbol{n}$ is an integer<br>$\lceil x\rceil=n$ if and only if $n-1&lt;x \leq n$ where $n$ is an integer<br>$\lfloor x\rfloor=n$ if and only if $x-1&lt;n \leq x$ where $n$ is an integer<br>$\lceil x\rceil=n$ if and only if $x \leq n&lt;x+1$ where $n$ is an integer<br>$x-1&lt;\lfloor x\rfloor \leq x \leq\lceil x\rceil&lt;x+1$<br>$\lfloor-x\rfloor=-\lceil x\rceil$<br>$\lceil-\boldsymbol{x}\rceil=-\lfloor\boldsymbol{x}\rfloor$<br>$\lfloor\boldsymbol{x}+\boldsymbol{m}\rfloor=\lfloor\boldsymbol{x}\rfloor+\boldsymbol{m}$ where $\boldsymbol{m}$ is an integer<br>$\lceil x+m\rceil=\lceil x\rceil+m$ where $m$ is an integer</p>
+<p><strong><a target="_blank" rel="noopener" href="https://www.math24.net/closures-relations#example7">传递闭包例题</a></strong></p>
+<h3 id="代数结构1"><a href="#代数结构1" class="headerlink" title="代数结构1"></a>代数结构1</h3><p>$<G,\ \cdot>$ 是一个群, $<H,\ \ast>$ 是任意代数结构, 如果存在 $ G $ 到 $ H $ 的满同态 $ f $  ,  证明 $<H,\ \ast>$  是群.</H,\></H,\></G,\></p>
 <blockquote>
 <p>结合律: 由满同态的性质可知.</p>
 <p>单位元: 由满同态的性质可知.</p>
@@ -610,9 +653,7 @@ a^{r}=a^{-k i_{0}} a^{i}</script><p>由此易知 $a^{r} \in H$, 由于 $0 \leq r
 <script type="math/tex; mode=display">
 i=k i_{0}, \quad a^{i}=\left(a^{i_{0}}\right)^{k}</script><p>从而 $H=\left(a^{i_{0}}\right) .$</p>
 </blockquote>
-<ul>
-<li>　设 $<G,\ \ast>$ 为 $n$ 阶循环群，则当且仅当 $m | n$时， G)有唯一的 $m $ 阶子群 $H$ 。</G,\></li>
-</ul>
+<p><strong>设 $ <G,\ \ast> $ 为 $ n $ 阶循环群，则当且仅当 $ m | n $时， G)有唯一的 $ m $ 阶子群 $H$ </G,\></strong></p>
 <blockquote>
 <p>$Proof$<br>先设 $G=(a)=\left\{a^{i} \mid i=0,1, \ldots, n-1\right\}, \quad a^{n}=a^{0}=e$ 。<br>$m=n$ 是显然的, 我们考虑其它的情况。 </p>
 <p><strong>充分性:</strong><br>取 $H=\left(a^{d}\right)$ 即可，其中 $d=\frac{n}{m}$ 。易于验证其满足条件。 我们再证明 $H$ 是唯一的满足要求的子群。 </p>
@@ -694,7 +735,21 @@ a 0+a 0=a 0+0</script><p>现利用消去律，即有 $a 0=0$, 同理 $0 a=0$, ( 
 <p>$Proof$</p>
 <p>有限半群若消去律成立则必为群</p>
 </blockquote>
-<h4 id="域"><a href="#域" class="headerlink" title="域"></a>域</h4><p><strong>定理 1 设 $\langle F$,  $+$ ,  $\cdot\ \  \rangle$ 是一个域，则:</strong><br><strong>( 1 ) 在加法群 $\langle F,+\rangle$ 中，每个 <u>非零</u> 元都具有同样的周期（阶）.</strong><br><strong>( 2 ) 如果 $\langle F,+\rangle$ 中非零元素的周期为有限数 $p$,</strong><br><strong>则 $p$ 必为素数.</strong></p>
+<h4 id="域"><a href="#域" class="headerlink" title="域"></a>域</h4><ul>
+<li><p><strong>特征是域才有的东西. 域的特征是单位元的加法周期.</strong></p>
+</li>
+<li><p>设$S$是$F$的子域，则$S$与$F$具有相同的特征.</p>
+</li>
+</ul>
+<blockquote>
+<p>$Proof$</p>
+<p>只需注意S与F的运算是相同的，且具有相同的0，1，则定理易明.</p>
+</blockquote>
+<ul>
+<li>环的同态是对于 $+$ 和 $×$ 分别而言的.</li>
+<li>域显然没有零因子. 因为可交换的除环才叫域, 而除环的去零集合是一个群. </li>
+</ul>
+<p><strong>定理 1 设 $\langle F$,  $+$ ,  $\cdot\ \  \rangle$ 是一个域，则:</strong><br><strong>( 1 ) 在加法群 $\langle F,+\rangle$ 中，每个 <u>非零</u> 元都具有同样的周期（阶）.</strong><br><strong>( 2 ) 如果 $\langle F,+\rangle$ 中非零元素的周期为有限数 $p$,</strong><br><strong>则 $p$ 必为素数.</strong></p>
 <blockquote>
 <p>$Proof$</p>
 <p>( 1 ) $\forall a \in F$, 设 $a \neq 0$, 用 $e$ 表示 $F$ 的单位元，则:</p>
@@ -712,7 +767,7 @@ p e=\left(p_{1} p_{2}\right) e=p_{1}\left(p_{2} e\right)=\left(p_{1} e\right)\le
 <li>域的特征就是 $<F , +>$ 的非零元的周期 $p$ .</F></li>
 <li><p>如果非零元周期是 $\infty $ 则域 $F$ 的特征为 $0$ .</p>
 </li>
-<li><p>结合上一个定理, 域 $F$ 的特征为素数或者 $0$ .</p>
+<li><p>结合上一个定理, 域 $F$ 的<strong>特征为素数或者 $0$</strong> .</p>
 </li>
 </ul>
 <blockquote>
@@ -728,6 +783,33 @@ p e=\left(p_{1} p_{2}\right) e=p_{1}\left(p_{2} e\right)=\left(p_{1} e\right)\le
 <ul>
 <li>若 $R\cong S$ 则当 $R$ 是域时 $S$ 必是域</li>
 </ul>
+<p><strong>若域 $F$ 的特征为素数 $p$, 则 $F$ 中必存在与 $\mathbf{Z}_{p}$ 同构的子域</strong> $\mathbf{Z}_{p}^{\prime} .$<br>证明 设 $e$ 是 $F$ 的单位元，令</p>
+<script type="math/tex; mode=display">
+\mathbf{Z}_{p}^{\prime}=\{\text { ie } \mid i \in \mathbf{Z}\}</script><p>因为 $e$ 的加法周期为 $p$, 故</p>
+<script type="math/tex; mode=display">
+\mathbf{Z}_{p}^{\prime}=\{0, e, 2 e, \ldots,(p+1) e\}</script><p>作 $\mathbf{Z}_{p}$ 到 $\mathbf{Z}_{p}^{\prime}$ 的映射 $\varphi$ :</p>
+<script type="math/tex; mode=display">
+\varphi:[i] \mid \rightarrow i e \quad \forall[i] \in \mathbf{Z}_{p}</script><p>显然 $\varphi$ 是 $\mathbf{Z}_{p}$ 到 $\mathbf{Z}_{p}^{\prime}$ 的双射， 下面证明 $\varphi$ 保持运算. $\quad \forall[i],[j] \in \mathbf{Z}_{p}$ 有</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\varphi\left([i]+_{p}[j]\right)=& \varphi([i+j])=(i+j) e \\
+&=(i e)+(j e)=\varphi([i])+\varphi([j]) \\
+\varphi\left([i] \times_{p}[j]\right)=& \varphi([i j])=(i j) e \\
+=&(i e) \cdot(j e)=\varphi([i]) \cdot \varphi([j])
+\end{aligned}</script><p>故 $\varphi$ 是$\mathbf{Z}_{p}$ 到 $\mathbf{Z}_{p}^{\prime}$ 的同构.</p>
+<p>如果 $F$ 是特征为 0 的域, 则 $F$ 有和 $Q$ 同构的子域. </p>
+<blockquote>
+<p>$Proof$</p>
+<p>用 $e$ 表示 $F$ 的单位元，令<br>$\mathbf{Q}^{\prime}=\left\{\frac{m e}{n e} \mid m, n \in \mathbf{Z}, n \neq 0\right\}$, 作有理数域 $\mathbf{Q}$ 到 $\mathbf{Q}^{\prime}$ 的映射 $\varphi:$</p>
+<script type="math/tex; mode=display">
+\varphi: \frac{m}{n} \mid \rightarrow \frac{m e}{n e} \quad \forall m, n \in \mathbf{Z}, n \neq 0 .</script><p>首先需要说明以上定义是合理的，即有理数 $q$ 的象由 $q$ 唯一确定，而与其表示方法无关.</p>
+<script type="math/tex; mode=display">
+ \begin{aligned}
+设\frac{m}{n}=& \frac{m^{\prime}}{n^{\prime}}, \\\text { 则 } m n^{\prime}=n m^{\prime}, \quad \text { 故 }\left(m n^{\prime}\right) e=\left(n m^{\prime}\right) e . \text { 由于 } \\
+\left(m n^{\prime}\right) e=m\left(n^{\prime} e\right)=(m e)\left(n^{\prime} e\right) \\
+\left(n m^{\prime}\right) e=n\left(m^{\prime} e\right)=(n e)\left(m^{\prime} e\right)
+\end{aligned}</script><p>故 $(m e)\left(n^{\prime} e\right)=(n e)\left(m^{\prime} e\right) .$ 两边同乘 $\left(n^{\prime} e\right)^{-1}(n e)^{-1} \quad$ ，有 $\quad \frac{m e}{n e}=\frac{m^{\prime} e}{n^{\prime} e} \quad$ 或说<br>$\varphi\left(\frac{m}{n}\right)=\varphi\left(\frac{m^{\prime}}{n^{\prime}}\right)$, 即同一个有理数的不同表达形式在 $\varphi$ 映射下得到的象是相同的，因<br>此 $\varphi$ 确为一个合理的 $\mathbf{Q}$ 到 $\mathbf{Q}^{\prime}$ 的映射.<br>不难看出 $\varphi$ 是满射，且容易验证 $\varphi$ 是单射、保持运算，因而 $\varphi: \mathbf{Q} \cong \mathbf{Q}$ ‘<br>由于 $\mathbf{Q}$ 是域，知 $\mathbf{Q}^{\prime}$ 是域, 从而是 $F$ 的子域, 这样就证明了 $F$ 中存在与 $\mathbf{Q}$ 同构的子域.</p>
+</blockquote>
 
     </div>
 
