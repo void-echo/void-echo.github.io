@@ -35,8 +35,10 @@
 <meta property="og:image" content="https://github.com/2021/06/10/DB-NOTE/image-20210610210632106.png">
 <meta property="og:image" content="https://github.com/2021/06/10/DB-NOTE/image-20210610212517996.png">
 <meta property="og:image" content="https://github.com/2021/06/10/DB-NOTE/image-20210610212950575.png">
+<meta property="og:image" content="https://github.com/2021/06/10/DB-NOTE/image-20210611003230799.png">
+<meta property="og:image" content="https://github.com/2021/06/10/DB-NOTE/image-20210611003240690.png">
 <meta property="article:published_time" content="2021-06-10T10:44:48.000Z">
-<meta property="article:modified_time" content="2021-06-10T14:06:54.497Z">
+<meta property="article:modified_time" content="2021-06-10T16:32:46.329Z">
 <meta property="article:author" content="voidecho">
 <meta property="article:tag" content="随便写写">
 <meta name="twitter:card" content="summary">
@@ -189,10 +191,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2021-06-10 18:44:48 / 修改时间：22:06:54" itemprop="dateCreated datePublished" datetime="2021-06-10T18:44:48+08:00">2021-06-10</time>
+              <time title="创建时间：2021-06-10 18:44:48" itemprop="dateCreated datePublished" datetime="2021-06-10T18:44:48+08:00">2021-06-10</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-06-11 00:32:46" itemprop="dateModified" datetime="2021-06-11T00:32:46+08:00">2021-06-11</time>
+              </span>
 
           
   
@@ -434,7 +442,64 @@ r⋈_θ s=σ_θ (r × s)</script><p>Thus</p>
 <p>All exiting tuples in the relation are <strong>assigned <code>null</code></strong> as the value for the new attribute. </p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> r <span class="keyword">drop</span> A</span><br></pre></td></tr></table></figure>
 <p>Dropping of attributes <strong>not supported by many databases</strong>.</p>
-<p>The result of an SQL quary is a <strong>relation</strong>.</p>
+<h3 id="SQL-rules-and-clauses"><a href="#SQL-rules-and-clauses" class="headerlink" title="SQL rules and  clauses"></a>SQL rules and  clauses</h3><p>The result of an SQL quary is a <strong>relation</strong>.</p>
+<p>SQL names are case insensitive.</p>
+<blockquote>
+<p>Find the department names of all instructors, and remove duplicates</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="keyword">distinct</span> dept_name <span class="keyword">from</span> instructor</span><br></pre></td></tr></table></figure>
+<p>The keyword <strong>all</strong> specifies that duplicates should not be removed.</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="keyword">all</span> dept_name <span class="keyword">from</span> instructor</span><br></pre></td></tr></table></figure>
+<p>$\ast $ means   <code>all attributes</code>   </p>
+</blockquote>
+<p><code>%</code> : any substring</p>
+<p><code>_</code> : any character</p>
+<p>We may specify <strong>desc</strong> for <strong>descending</strong> order or <strong>asc</strong> for ascending order, for each attribute; ascending order is the default.</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="keyword">distinct</span> name <span class="keyword">from</span> instructor <span class="keyword">order</span> <span class="keyword">by</span> name <span class="keyword">desc</span>; </span><br></pre></td></tr></table></figure>
+<p><strong>Tuple comparison</strong></p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> name, course_id <span class="keyword">from</span> instructor,teachers <span class="keyword">where</span> (instructor.ID, dept_name) <span class="operator">=</span> (teachers.ID, <span class="string">&#x27;Biology&#x27;</span>);</span><br></pre></td></tr></table></figure>
+<p><code>union</code> : $\vee$ </p>
+<p><code>intersect</code> : $\land$ </p>
+<p><code>except</code> : $\land \neg\ b$ </p>
+<p>Each of the above operations <strong>automatically eliminates</strong> duplicates.</p>
+<p>To retain all duplicates use the</p>
+<ul>
+<li><p><strong>union all</strong>,</p>
+</li>
+<li><p><strong>intersect all</strong></p>
+</li>
+<li><p><strong>except all</strong>.</p>
+</li>
+</ul>
+<h3 id="Null-values"><a href="#Null-values" class="headerlink" title="Null values"></a>Null values</h3><p>The result of any arithmetic expression involving <strong>null</strong> is <strong>null</strong></p>
+<blockquote>
+<p>Example: 5 + <strong>null</strong> returns <strong>null</strong></p>
+</blockquote>
+<p>The predicate <strong>is null</strong> can be used to check for null values. (or maybe <strong>is not null</strong>)</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> name <span class="keyword">from</span> instructor <span class="keyword">where</span> salary <span class="keyword">is</span> <span class="keyword">null</span>;</span><br></pre></td></tr></table></figure>
+<p>SQL treats as <strong>unknown</strong> the result of any comparison involving a null value (other than predicates <strong>is null</strong> and <strong>is not null</strong>).</p>
+<p>The predicate in a <strong>where</strong> clause can involve Boolean operations (<strong>and</strong>, <strong>or</strong>, <strong>not</strong>); thus the definitions of the Boolean operations need to be extended to deal with the value <strong>unknown</strong>.</p>
+<p><strong>and</strong> : <em>(true</em> <strong>and</strong> <em>unknown) = unknown,<br>      (false</em> <strong>and</strong> <em>unknown) = false,<br>      (unknown</em> <strong>and</strong> <em>unknown) = unknown</em></p>
+<p><strong>or:</strong>   (<em>unknown</em> <strong>or</strong> <em>true</em>)  = <em>true</em>,<br>      (<em>unknown</em> <strong>or</strong> <em>false</em>) = <em>unknown</em><br>      (<em>unknown</em> <strong>or</strong> <em>unknown) = unknown</em></p>
+<p>Result of <strong>where</strong> clause predicate is treated as <em>false</em> if it evaluates to <em>unknown</em></p>
+<h3 id="Aggregate-Functions"><a href="#Aggregate-Functions" class="headerlink" title="Aggregate Functions"></a>Aggregate Functions</h3><p>These functions operate on the multiset of values of a column of a relation, and return a value</p>
+<p><strong>avg</strong> <strong>:</strong> average value<br><strong>min:</strong> minimum value<br><strong>max:</strong> maximum value<br><strong>sum:</strong> sum of values<br><strong>count:</strong> number of values</p>
+<blockquote>
+<p><strong>Examples:</strong></p>
+<p>Find the average salary of instructors in the Computer Science department </p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="built_in">avg</span>(salary) <span class="keyword">from</span> instructor <span class="keyword">where</span> dept_name <span class="operator">=</span> <span class="string">&#x27;Comp.Sci&#x27;</span>;</span><br></pre></td></tr></table></figure>
+<p>Find the total number of instructors who teach a course in the Spring 2018 semester</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="built_in">count</span>(<span class="keyword">distinct</span> ID) <span class="keyword">from</span> teachers <span class="keyword">where</span> semester <span class="operator">=</span> <span class="string">&#x27;Spring&#x27;</span> <span class="keyword">and</span> <span class="keyword">year</span> <span class="operator">=</span> <span class="number">2018</span>;</span><br></pre></td></tr></table></figure>
+<p>number of tuples in the <em>course</em> relation</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="built_in">count</span>(<span class="operator">*</span>) <span class="keyword">from</span> course;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p><strong>group by</strong></p>
+<blockquote>
+<p>Find the average salary of instructors in each department</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> dept_name, <span class="built_in">avg</span> (salary) <span class="keyword">as</span> avg_salaryfrom instructor <span class="keyword">group</span> <span class="keyword">by</span> dept_name;</span><br></pre></td></tr></table></figure>
+<p>Result:</p>
+<p><img src="/2021/06/10/DB-NOTE/image-20210611003230799.png" alt="image-20210611003230799" style="zoom:50%;"></p>
+<p><img src="/2021/06/10/DB-NOTE/image-20210611003240690.png" alt="image-20210611003240690" style="zoom:67%;"></p>
+</blockquote>
 
     </div>
 
@@ -535,7 +600,7 @@ r⋈_θ s=σ_θ (r × s)</script><p>Thus</p>
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Chapter-2"><span class="nav-number">1.</span> <span class="nav-text">Chapter 2</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Database-schema"><span class="nav-number">1.1.</span> <span class="nav-text">Database schema</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Keys"><span class="nav-number">1.2.</span> <span class="nav-text">Keys</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Schema-Diagram-for-University-Database"><span class="nav-number">1.3.</span> <span class="nav-text">Schema Diagram for University Database</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Relational-Quary-Languages"><span class="nav-number">1.4.</span> <span class="nav-text">Relational Quary Languages</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Relational-Algebra"><span class="nav-number">1.5.</span> <span class="nav-text">Relational Algebra</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Select-Operation"><span class="nav-number">1.6.</span> <span class="nav-text">Select Operation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Project-Operation"><span class="nav-number">1.7.</span> <span class="nav-text">Project Operation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Composition-of-Relational-Operations"><span class="nav-number">1.8.</span> <span class="nav-text">Composition of Relational Operations</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Cartesian-Product-Operation"><span class="nav-number">1.9.</span> <span class="nav-text">Cartesian-Product Operation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Join-Operation"><span class="nav-number">1.10.</span> <span class="nav-text">Join Operation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Union-Operation"><span class="nav-number">1.11.</span> <span class="nav-text">Union Operation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Set-Intersection-Operation"><span class="nav-number">1.12.</span> <span class="nav-text">Set-Intersection Operation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Set-Difference-Operation"><span class="nav-number">1.13.</span> <span class="nav-text">Set Difference Operation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Assignment-Operation"><span class="nav-number">1.14.</span> <span class="nav-text">Assignment Operation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Rename-Operation"><span class="nav-number">1.15.</span> <span class="nav-text">Rename Operation</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Chapter-3-SQL"><span class="nav-number">2.</span> <span class="nav-text">Chapter 3 SQL</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Intergrity-Constraints-in-Create-Table"><span class="nav-number">2.1.</span> <span class="nav-text">Intergrity Constraints in Create Table</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Updates-to-tables"><span class="nav-number">2.2.</span> <span class="nav-text">Updates to tables</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Chapter-2"><span class="nav-number">1.</span> <span class="nav-text">Chapter 2</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Database-schema"><span class="nav-number">1.1.</span> <span class="nav-text">Database schema</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Keys"><span class="nav-number">1.2.</span> <span class="nav-text">Keys</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Schema-Diagram-for-University-Database"><span class="nav-number">1.3.</span> <span class="nav-text">Schema Diagram for University Database</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Relational-Quary-Languages"><span class="nav-number">1.4.</span> <span class="nav-text">Relational Quary Languages</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Relational-Algebra"><span class="nav-number">1.5.</span> <span class="nav-text">Relational Algebra</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Select-Operation"><span class="nav-number">1.6.</span> <span class="nav-text">Select Operation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Project-Operation"><span class="nav-number">1.7.</span> <span class="nav-text">Project Operation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Composition-of-Relational-Operations"><span class="nav-number">1.8.</span> <span class="nav-text">Composition of Relational Operations</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Cartesian-Product-Operation"><span class="nav-number">1.9.</span> <span class="nav-text">Cartesian-Product Operation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Join-Operation"><span class="nav-number">1.10.</span> <span class="nav-text">Join Operation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Union-Operation"><span class="nav-number">1.11.</span> <span class="nav-text">Union Operation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Set-Intersection-Operation"><span class="nav-number">1.12.</span> <span class="nav-text">Set-Intersection Operation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Set-Difference-Operation"><span class="nav-number">1.13.</span> <span class="nav-text">Set Difference Operation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Assignment-Operation"><span class="nav-number">1.14.</span> <span class="nav-text">Assignment Operation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Rename-Operation"><span class="nav-number">1.15.</span> <span class="nav-text">Rename Operation</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Chapter-3-SQL"><span class="nav-number">2.</span> <span class="nav-text">Chapter 3 SQL</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Intergrity-Constraints-in-Create-Table"><span class="nav-number">2.1.</span> <span class="nav-text">Intergrity Constraints in Create Table</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Updates-to-tables"><span class="nav-number">2.2.</span> <span class="nav-text">Updates to tables</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SQL-rules-and-clauses"><span class="nav-number">2.3.</span> <span class="nav-text">SQL rules and  clauses</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Null-values"><span class="nav-number">2.4.</span> <span class="nav-text">Null values</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Aggregate-Functions"><span class="nav-number">2.5.</span> <span class="nav-text">Aggregate Functions</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
