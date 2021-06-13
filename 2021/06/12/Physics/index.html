@@ -29,7 +29,7 @@
 <meta property="og:image" content="https://pic4.zhimg.com/80/v2-15a0059df14106d7eac7a9746a30fbcb_1440w.jpg">
 <meta property="og:image" content="https://pic1.zhimg.com/80/v2-a6bb05485ddc582560a279300f2bf444_1440w.jpg">
 <meta property="article:published_time" content="2021-06-12T13:09:09.000Z">
-<meta property="article:modified_time" content="2021-06-12T14:02:01.106Z">
+<meta property="article:modified_time" content="2021-06-13T08:36:38.133Z">
 <meta property="article:author" content="voidecho">
 <meta property="article:tag" content="随便写写">
 <meta name="twitter:card" content="summary">
@@ -182,10 +182,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2021-06-12 21:09:09 / 修改时间：22:02:01" itemprop="dateCreated datePublished" datetime="2021-06-12T21:09:09+08:00">2021-06-12</time>
+              <time title="创建时间：2021-06-12 21:09:09" itemprop="dateCreated datePublished" datetime="2021-06-12T21:09:09+08:00">2021-06-12</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-06-13 16:36:38" itemprop="dateModified" datetime="2021-06-13T16:36:38+08:00">2021-06-13</time>
+              </span>
 
           
   
@@ -214,6 +220,70 @@
       
         <escape><span id="more"></span></escape>
 
+<h2 id="质点力学——A"><a href="#质点力学——A" class="headerlink" title="质点力学——A"></a>质点力学——A</h2><ul>
+<li>一定要搞清<u>位移的大小</u>和<u>位矢大小的增量</u>这两个概念</li>
+</ul>
+<p><strong>Speed</strong></p>
+<ul>
+<li>average speed</li>
+</ul>
+<script type="math/tex; mode=display">
+\overline{\vec{v}}=\frac{\Delta \vec{r}}{\Delta t}</script><ul>
+<li>瞬时速度</li>
+</ul>
+<script type="math/tex; mode=display">
+\vec{v}=\lim _{\Delta t \rightarrow 0} \frac{\vec{r}(t+\Delta t)-\vec{r}(t)}{\Delta t}=\lim _{\Delta t \rightarrow 0} \frac{\Delta \vec{r}}{\Delta t}=\frac{d \vec{r}}{d t}</script><p>都是矢量</p>
+<hr>
+<p><strong>加速度</strong></p>
+<p>平均</p>
+<script type="math/tex; mode=display">
+\overline{\vec{a}}=\frac{\Delta \vec{v}}{\Delta t}</script><p>瞬时</p>
+<script type="math/tex; mode=display">
+\vec{a}=\lim _{\Delta t \rightarrow 0} \frac{\Delta \vec{v}}{\Delta t}=\frac{d \vec{v}}{d t}=\frac{d^{2} \vec{r}}{d t^{2}}</script><p><strong>注意</strong></p>
+<script type="math/tex; mode=display">
+\frac{dr}{dt} 是速度的径向分量
+\\
+|\frac{d\vec{r}}{dt}|是速率
+\\
+|\frac{dr}{dt}|是速度的径向分量的大小</script><hr>
+<h3 id="圆周运动"><a href="#圆周运动" class="headerlink" title="圆周运动"></a>圆周运动</h3><p><strong>切向加速度&amp;法向加速度</strong> </p>
+<script type="math/tex; mode=display">
+a_{\tau}=\frac{d v}{d t}, \quad a_{n}=\frac{v^{2}}{R}</script><p><strong>加速度大小</strong></p>
+<script type="math/tex; mode=display">
+a = |\vec{a}| = \sqrt{a^2_{\tau} +a^2_{n} }</script><p><strong>圆周运动的角量表示</strong></p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+&\omega=\lim _{\Delta t \rightarrow 0} \frac{\Delta \theta}{\Delta t}=\frac{d \theta}{d t} \\
+&\alpha=\lim _{\Delta t \rightarrow 0} \frac{\Delta \omega}{\Delta t}=\frac{d \omega}{d t}=\frac{d^{2} \theta}{d t^{2}}
+\end{aligned}</script><p><strong>线量和角量的关系</strong></p>
+<script type="math/tex; mode=display">
+v = R\omega\\\Delta s = R\cdot\Delta\theta\\a_{\tau} = R\alpha</script><p>匀变速率圆周运动</p>
+<p>与匀变速率直线运动类比 </p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+&\omega=\omega_{0}+\alpha t \quad v=v_{0}+a t\\
+&\theta=\theta_{0}+\omega_{0} t+\frac{1}{2} \alpha t^{2} \quad s=s_{0}+v_{0} t+\frac{1}{2} a t^{2}\\
+&\omega^{2}=\omega_{0}^{2}+2 \alpha\left(\theta-\theta_{0}\right) \quad v^{2}=v_{0}^{2}+2 a\left(s-s_{0}\right)
+\end{aligned}</script><h2 id="质点力学——B"><a href="#质点力学——B" class="headerlink" title="质点力学——B"></a>质点力学——B</h2><p><strong>牛二</strong></p>
+<script type="math/tex; mode=display">
+\vec{F}(t)=m \frac{\mathrm{d} \vec{v}}{\mathrm{~d} t}=m \vec{a}</script><p>知道某一个方向的力，就可以列出该方向的牛顿第二定律。</p>
+<p>对于作用力与反作用力要注意： 大小相等，方向相反，作用在两个不同物体上，<strong>不能相互抵消。</strong> 同时产生，同时消失。 <strong>作用力和反作用力是同一性质的力</strong> </p>
+<script type="math/tex; mode=display">
+F=G\frac{m_1m_2}{r^2}\\     \\     \\    G=6.67×10^{-11}N\cdot m^2 \cdot kg^{-2}</script><p><strong>重力</strong></p>
+<script type="math/tex; mode=display">
+P = mg\\g = 9.80m\cdot s^{-2}</script><hr>
+<p><strong>动量</strong></p>
+<script type="math/tex; mode=display">
+\vec{F}\mathrm{d}t=\mathrm{d}\vec{p}=\mathrm{d}(m\vec{v})</script><script type="math/tex; mode=display">
+\vec{I}=\int_{t_{1}}^{t_{2}} \vec{F} \mathrm{~d} t=m \vec{v}_{2}-m \vec{v}_{1}</script><p>质点所受合外力 $=$ 质点系总的动量增量</p>
+<script type="math/tex; mode=display">
+\int_{t_{1}}^{t_{2}} \vec{F}^{\mathrm{ex}} \mathrm{d} t=\sum_{i=1}^{n} m_{i} \vec{v}_{i}-\sum_{i=1}^{n} m_{i} \vec{v}_{i 0}</script><script type="math/tex; mode=display">
+\vec{F}^{\mathrm{ex}} =\vec{F}_1 +\vec{F}_2 + ...+\vec{F}_N</script><hr>
+<p><strong>动能定理</strong></p>
+<script type="math/tex; mode=display">
+W=\int^B_A{\vec{F}\cdot\mathrm{d}}\vec{r}=\int^B_AFcos\theta\mathrm{d}s</script><script type="math/tex; mode=display">
+W=\frac{1}{2} m v_{2}^{2}-\frac{1}{2} m v_{1}^{2}=E_{\mathrm{k} 2}-E_{\mathrm{k} 1}</script><hr>
+<p>保守力做功和路径无关, 非保守力不然.</p>
 <h2 id="磁场-毕奥─萨伐尔定律"><a href="#磁场-毕奥─萨伐尔定律" class="headerlink" title="磁场  毕奥─萨伐尔定律"></a>磁场  毕奥─萨伐尔定律</h2><p><strong>电流强度</strong></p>
 <script type="math/tex; mode=display">
 I = \frac{dq}{dt} = nquS_{\perp}</script><blockquote>
@@ -382,7 +452,7 @@ d B=\frac{\mu_{0}}{4 \pi} \frac{I d l \sin \theta}{r^{2}}</script><p>真空磁�
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A3%81%E5%9C%BA-%E6%AF%95%E5%A5%A5%E2%94%80%E8%90%A8%E4%BC%90%E5%B0%94%E5%AE%9A%E5%BE%8B"><span class="nav-number">1.</span> <span class="nav-text">磁场  毕奥─萨伐尔定律</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AF%95-%E8%90%A8%E5%AE%9A%E5%BE%8B"><span class="nav-number">1.1.</span> <span class="nav-text">毕-萨定律</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A3%81%E9%80%9A%E9%87%8F"><span class="nav-number">1.2.</span> <span class="nav-text">磁通量</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B4%A8%E7%82%B9%E5%8A%9B%E5%AD%A6%E2%80%94%E2%80%94A"><span class="nav-number">1.</span> <span class="nav-text">质点力学——A</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%86%E5%91%A8%E8%BF%90%E5%8A%A8"><span class="nav-number">1.1.</span> <span class="nav-text">圆周运动</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B4%A8%E7%82%B9%E5%8A%9B%E5%AD%A6%E2%80%94%E2%80%94B"><span class="nav-number">2.</span> <span class="nav-text">质点力学——B</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A3%81%E5%9C%BA-%E6%AF%95%E5%A5%A5%E2%94%80%E8%90%A8%E4%BC%90%E5%B0%94%E5%AE%9A%E5%BE%8B"><span class="nav-number">3.</span> <span class="nav-text">磁场  毕奥─萨伐尔定律</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AF%95-%E8%90%A8%E5%AE%9A%E5%BE%8B"><span class="nav-number">3.1.</span> <span class="nav-text">毕-萨定律</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A3%81%E9%80%9A%E9%87%8F"><span class="nav-number">3.2.</span> <span class="nav-text">磁通量</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -398,7 +468,7 @@ d B=\frac{\mu_{0}}{4 \pi} \frac{I d l \sin \theta}{r^{2}}</script><p>真空磁�
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">16</span>
+          <span class="site-state-item-count">12</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
