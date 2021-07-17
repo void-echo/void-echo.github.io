@@ -20,20 +20,31 @@
     var CONFIG = {"hostname":"github.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="Tips of Calculus">
+  <meta name="description" content="定个小目标：暑假学完概率论！！">
 <meta property="og:type" content="article">
-<meta property="og:title" content="微積分のテクニック">
-<meta property="og:url" content="https://github.com/2021/06/13/%E5%BE%AE%E7%A9%8D%E5%88%86%E3%81%AE%E3%83%86%E3%82%AF%E3%83%8B%E3%83%83%E3%82%AF/index.html">
+<meta property="og:title" content="概率论ノート">
+<meta property="og:url" content="https://github.com/2021/07/17/%E6%A6%82%E7%8E%87%E8%AE%BA%E3%83%8E%E3%83%BC%E3%83%88/index.html">
 <meta property="og:site_name" content="Void-Echo">
-<meta property="og:description" content="Tips of Calculus">
+<meta property="og:description" content="定个小目标：暑假学完概率论！！">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-06-13T12:30:55.000Z">
-<meta property="article:modified_time" content="2021-06-13T12:53:18.911Z">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5Cbegin%7Baligned%7D+P%28k%29+%26%3D+%5Clim_%7Bn+%5Cto+%5Cinfty%7D++C_n%5Ek+%5Ccdot%7B%5Cfrac%7B%5Clambda%7D%7Bn%7D%7D%5E%7Bk%7D%281-%5Cfrac%7B%5Clambda%7D%7Bn%7D%29%5E%7Bn-k%7D+%5C%5C+%26%3D++%5Clim_%7Bn+%5Cto+%5Cinfty%7D+%5Cfrac%7Bn%28n-1%29%28n-2%29%5Ccdots%28n-k%2B1%29%7D%7Bk%21%7D%7B%5Cfrac%7B%5Clambda%7D%7Bn%7D%7D%5Ek%281-%5Cfrac%7B%5Clambda%7D%7Bn%7D%29%5E%7Bn-k%7D+%5C%5C+%26%3D+%5Clim_%7Bn+%5Cto+%5Cinfty%7D+%5Cfrac%7B%5Clambda%5Ek%7D%7Bk%21%7D+%281-%5Cfrac%7B%5Clambda%7D%7Bn%7D%29%5En%5Ccdot+%5Cfrac%7Bn%7D%7Bn%7D+%5Ccdot+%5Cfrac%7Bn-1%7D%7Bn%7D%5Ccdots+%5Cfrac%7Bn-k%2B1%7D%7Bn%7D+%281-%5Cfrac%7B%5Clambda%7D%7Bn%7D%29%5E%7B-k%7D+%5Cend%7Baligned%7D+%5C%5C">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5Cbegin%7Baligned%7D+%5Clim_%7Bn+%5Cto+%5Cinfty%7D%5Cfrac%7Bn%7D%7Bn%7D+%5Ccdot+%5Cfrac%7Bn-1%7D%7Bn%7D%5Ccdots+%5Cfrac%7Bn-k%2B1%7D%7Bn%7D+%281-%5Cfrac%7B%5Clambda%7D%7Bn%7D%29%5E%7B-k%7D+%3D+1+%5Cend%7Baligned%7D+%5C%5C">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5Cbegin%7Baligned%7D+%5Clim_%7Bn+%5Cto+%5Cinfty%7D%281-%5Cfrac%7B%5Clambda%7D%7Bn%7D%29%5En+%26%3D+%5Clim_%7Bn%5Cto+%5Cinfty%7D%5C%7B%281%2B%5Cfrac%7B1%7D%7B-%5Cfrac%7Bn%7D%7B%5Clambda%7D%7D%29%5E%7B-%5Cfrac%7Bn%7D%7B%5Clambda%7D%7D%5C%7D%5E%7B-%5Clambda%7D%5C%5C+%26%3D+e%5E%7B-%5Clambda%7D+%5Cend%7Baligned%7D+%5C%5C">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=P%28k%29+%3D+%5Cfrac%7B%5Clambda%5Ek%7D%7Bk%21%7De%5E%7B-%5Clambda%7D+%5C%5C">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5Clambda+%3D+np+%3D+1000+%2A+0.1%25+%3D+1+%5C%5C">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=P%28k+%5Cgeq+2%29+%3D+1+-+P%28k%3D1%29+-+P%28k%3D0%29+%3D+1+-+%5Cfrac%7B1%5E1+e%5E%7B-1%7D%7D%7B1%21%7D+-+%5Cfrac%7B1%5E0+e%5E%7B-1%7D%7D%7B0%21%7D%5Capprox+0.264+%5C%5C">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=P%5Cleft%28+%5Cxi%3Dn+%5Cright%29%3Dg%5Cleft%28+p%3Bn+%5Cright%29%3Dp%5Cleft%28+1-p+%5Cright%29%5E%7Bn-1%7D">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=n%5Cin%5Cmathbb%7BN%7D%5E%7B%2A%7D">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=E%5Cleft%28+X+%5Cright%29%3Dp%2B2%5Cleft%28+1-p+%5Cright%29p%2B3%5Cleft%28+1-p+%5Cright%29%5E%7B2%7Dp%2B%5Ccdots%2Bn%5Cleft%28+1-p+%5Cright%29%5E%7Bn-1%7Dp%2B%5Ccdots">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=E%5Cleft%28+X+%5Cright%29%3D%5Cfrac%7B1%7D%7Bp%7D">
+<meta property="article:published_time" content="2021-07-17T00:57:21.000Z">
+<meta property="article:modified_time" content="2021-07-17T01:28:03.018Z">
 <meta property="article:author" content="voidecho">
 <meta property="article:tag" content="随便写写">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.zhihu.com/equation?tex=%5Cbegin%7Baligned%7D+P%28k%29+%26%3D+%5Clim_%7Bn+%5Cto+%5Cinfty%7D++C_n%5Ek+%5Ccdot%7B%5Cfrac%7B%5Clambda%7D%7Bn%7D%7D%5E%7Bk%7D%281-%5Cfrac%7B%5Clambda%7D%7Bn%7D%29%5E%7Bn-k%7D+%5C%5C+%26%3D++%5Clim_%7Bn+%5Cto+%5Cinfty%7D+%5Cfrac%7Bn%28n-1%29%28n-2%29%5Ccdots%28n-k%2B1%29%7D%7Bk%21%7D%7B%5Cfrac%7B%5Clambda%7D%7Bn%7D%7D%5Ek%281-%5Cfrac%7B%5Clambda%7D%7Bn%7D%29%5E%7Bn-k%7D+%5C%5C+%26%3D+%5Clim_%7Bn+%5Cto+%5Cinfty%7D+%5Cfrac%7B%5Clambda%5Ek%7D%7Bk%21%7D+%281-%5Cfrac%7B%5Clambda%7D%7Bn%7D%29%5En%5Ccdot+%5Cfrac%7Bn%7D%7Bn%7D+%5Ccdot+%5Cfrac%7Bn-1%7D%7Bn%7D%5Ccdots+%5Cfrac%7Bn-k%2B1%7D%7Bn%7D+%281-%5Cfrac%7B%5Clambda%7D%7Bn%7D%29%5E%7B-k%7D+%5Cend%7Baligned%7D+%5C%5C">
 
-<link rel="canonical" href="https://github.com/2021/06/13/%E5%BE%AE%E7%A9%8D%E5%88%86%E3%81%AE%E3%83%86%E3%82%AF%E3%83%8B%E3%83%83%E3%82%AF/">
+<link rel="canonical" href="https://github.com/2021/07/17/%E6%A6%82%E7%8E%87%E8%AE%BA%E3%83%8E%E3%83%BC%E3%83%88/">
 
 
 <script id="page-configurations">
@@ -46,7 +57,7 @@
   };
 </script>
 
-  <title>微積分のテクニック | Void-Echo</title>
+  <title>概率论ノート | Void-Echo</title>
   
 
 
@@ -158,7 +169,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://github.com/2021/06/13/%E5%BE%AE%E7%A9%8D%E5%88%86%E3%81%AE%E3%83%86%E3%82%AF%E3%83%8B%E3%83%83%E3%82%AF/">
+    <link itemprop="mainEntityOfPage" href="https://github.com/2021/07/17/%E6%A6%82%E7%8E%87%E8%AE%BA%E3%83%8E%E3%83%BC%E3%83%88/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/QQ.jpg">
@@ -171,7 +182,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          微積分のテクニック
+          概率论ノート
         </h1>
 
         <div class="post-meta">
@@ -182,7 +193,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2021-06-13 20:30:55 / 修改时间：20:53:18" itemprop="dateCreated datePublished" datetime="2021-06-13T20:30:55+08:00">2021-06-13</time>
+              <time title="创建时间：2021-07-17 08:57:21 / 修改时间：09:28:03" itemprop="dateCreated datePublished" datetime="2021-07-17T08:57:21+08:00">2021-07-17</time>
             </span>
 
           
@@ -194,8 +205,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2021/06/13/%E5%BE%AE%E7%A9%8D%E5%88%86%E3%81%AE%E3%83%86%E3%82%AF%E3%83%8B%E3%83%83%E3%82%AF/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2021/06/13/%E5%BE%AE%E7%A9%8D%E5%88%86%E3%81%AE%E3%83%86%E3%82%AF%E3%83%8B%E3%83%83%E3%82%AF/" itemprop="commentCount"></span>
+    <a title="valine" href="/2021/07/17/%E6%A6%82%E7%8E%87%E8%AE%BA%E3%83%8E%E3%83%BC%E3%83%88/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/07/17/%E6%A6%82%E7%8E%87%E8%AE%BA%E3%83%8E%E3%83%BC%E3%83%88/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -210,57 +221,46 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>Tips of Calculus</p>
+        <p>定个小目标：暑假学完概率论！！</p>
 <escape><span id="more"></span></escape>
 
-<hr>
-<p><strong>在一个球面上, 求面积的积分</strong></p>
-<script type="math/tex; mode=display">
-\begin{align}
-\mathrm{d} S&= \sqrt{1+z^2_x+z^2_y}\mathrm{d}x \mathrm{d}y\\
-&=\frac{a}{\sqrt{a^2-x^2-y^2}}\mathrm{d}x \mathrm{d}y
-\end{align}</script><blockquote>
-<p><strong>求:</strong></p>
-<script type="math/tex; mode=display">
-\iint \limits_{\Sigma}(x+y+z) \mathrm{d}S</script><p>其中 $\sum$ 为球面 $x^2+y^2+z^2=a^2$ 上 $z \ge h$ 的部分.</p>
-<p><strong>Solution</strong></p>
-<p>$\pi a(a^2-h^2)$</p>
+<h3 id="泊松分布"><a href="#泊松分布" class="headerlink" title="泊松分布"></a>泊松分布</h3><p><u>公式推导</u></p>
+<p><img src="https://www.zhihu.com/equation?tex=%5Cbegin%7Baligned%7D+P%28k%29+%26%3D+%5Clim_%7Bn+%5Cto+%5Cinfty%7D++C_n%5Ek+%5Ccdot%7B%5Cfrac%7B%5Clambda%7D%7Bn%7D%7D%5E%7Bk%7D%281-%5Cfrac%7B%5Clambda%7D%7Bn%7D%29%5E%7Bn-k%7D+%5C%5C+%26%3D++%5Clim_%7Bn+%5Cto+%5Cinfty%7D+%5Cfrac%7Bn%28n-1%29%28n-2%29%5Ccdots%28n-k%2B1%29%7D%7Bk%21%7D%7B%5Cfrac%7B%5Clambda%7D%7Bn%7D%7D%5Ek%281-%5Cfrac%7B%5Clambda%7D%7Bn%7D%29%5E%7Bn-k%7D+%5C%5C+%26%3D+%5Clim_%7Bn+%5Cto+%5Cinfty%7D+%5Cfrac%7B%5Clambda%5Ek%7D%7Bk%21%7D+%281-%5Cfrac%7B%5Clambda%7D%7Bn%7D%29%5En%5Ccdot+%5Cfrac%7Bn%7D%7Bn%7D+%5Ccdot+%5Cfrac%7Bn-1%7D%7Bn%7D%5Ccdots+%5Cfrac%7Bn-k%2B1%7D%7Bn%7D+%281-%5Cfrac%7B%5Clambda%7D%7Bn%7D%29%5E%7B-k%7D+%5Cend%7Baligned%7D+%5C%5C" alt="[公式]"></p>
+<p>其中</p>
+<p><img src="https://www.zhihu.com/equation?tex=%5Cbegin%7Baligned%7D+%5Clim_%7Bn+%5Cto+%5Cinfty%7D%5Cfrac%7Bn%7D%7Bn%7D+%5Ccdot+%5Cfrac%7Bn-1%7D%7Bn%7D%5Ccdots+%5Cfrac%7Bn-k%2B1%7D%7Bn%7D+%281-%5Cfrac%7B%5Clambda%7D%7Bn%7D%29%5E%7B-k%7D+%3D+1+%5Cend%7Baligned%7D+%5C%5C" alt="[公式]"></p>
+<p><img src="https://www.zhihu.com/equation?tex=%5Cbegin%7Baligned%7D+%5Clim_%7Bn+%5Cto+%5Cinfty%7D%281-%5Cfrac%7B%5Clambda%7D%7Bn%7D%29%5En+%26%3D+%5Clim_%7Bn%5Cto+%5Cinfty%7D%5C%7B%281%2B%5Cfrac%7B1%7D%7B-%5Cfrac%7Bn%7D%7B%5Clambda%7D%7D%29%5E%7B-%5Cfrac%7Bn%7D%7B%5Clambda%7D%7D%5C%7D%5E%7B-%5Clambda%7D%5C%5C+%26%3D+e%5E%7B-%5Clambda%7D+%5Cend%7Baligned%7D+%5C%5C" alt="[公式]"></p>
+<p>故</p>
+<p><img src="https://www.zhihu.com/equation?tex=P%28k%29+%3D+%5Cfrac%7B%5Clambda%5Ek%7D%7Bk%21%7De%5E%7B-%5Clambda%7D+%5C%5C" alt="[公式]"></p>
+<p>泊松分布是我们将时间无限切分，然后套用二项分布利用数学极限推导出来的结果。本质上来说，它的<strong>内核仍然是二项分布</strong>。</p>
+<p>使用泊松分布的原因是，<strong>当n很大，p很小的时候，我们使用二项分布计算会非常困难</strong>，因为使用乘方计算出来的值会非常巨大，这个时候，我们使用泊松分布去逼近这个概率就很方便了。</p>
+<p><u>使用条件</u></p>
+<ol>
+<li>当我们将时间进行无线切分之后，在接近于0的时间段内事件发生的概率与时间成正比。</li>
+<li>在每一段无限小的时间段内，同一事件发生两次的概率无限接近于0</li>
+<li><strong>独立</strong></li>
+</ol>
+<blockquote>
+<p>最后，我们看一道书上的例题，实际感受一下泊松分布的应用。假设我们有一批零件，它的次品率是0.1%，也就是千分之一。请问我们生产一千个产品当中至少有两件次品的概率？</p>
+<p>这道题应该很简单，要求两件及以上次品的概率，我们只需要计算出只有零件和一件次品的概率，然后用1减去它们即可。我们首先根据 $n$ 和 $p$ 算出 $\lambda$ </p>
+<p><img src="https://www.zhihu.com/equation?tex=%5Clambda+%3D+np+%3D+1000+%2A+0.1%25+%3D+1+%5C%5C" alt="[公式]"></p>
+<p>我们带入泊松分布的公式：</p>
+<p><img src="https://www.zhihu.com/equation?tex=P%28k+%5Cgeq+2%29+%3D+1+-+P%28k%3D1%29+-+P%28k%3D0%29+%3D+1+-+%5Cfrac%7B1%5E1+e%5E%7B-1%7D%7D%7B1%21%7D+-+%5Cfrac%7B1%5E0+e%5E%7B-1%7D%7D%7B0%21%7D%5Capprox+0.264+%5C%5C" alt="[公式]"></p>
+<p>如果我们要用二项分布来计算，那么就需要计算0.999的一千次方了，这显然是非常麻烦的，这也是泊松分布的意义。</p>
 </blockquote>
-<hr>
-<p><strong>一拱的面积</strong></p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th>Formula</th>
-<th>S</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>$\sin\ \ x$</td>
-<td>$2 $</td>
-</tr>
-<tr>
-<td>$\sin^2 x$</td>
-<td>$\pi/2$</td>
-</tr>
-<tr>
-<td>$\sin^3 x$</td>
-<td>$4/3$</td>
-</tr>
-<tr>
-<td>$\sin^4 x$</td>
-<td>$3\pi/8$</td>
-</tr>
-<tr>
-<td>$\sin^5 x$</td>
-<td>$16/15$</td>
-</tr>
-</tbody>
-</table>
-</div>
-
+<h3 id="几何分布"><a href="#几何分布" class="headerlink" title="几何分布"></a>几何分布</h3><p><em>几何分布</em>（Geometric distribution）是离散型概率分布。其中一种定义为：<strong>在n次伯努利试验中，试验k次才得到第一次成功的机率</strong>。详细地说，是：前k-1次皆失败，第k次成功的概率。</p>
+<p>你不断重复做伯努利实验，直到你期待的某件事发生，以 $p$ 表示这件事发生的概率，以 $\xi$ 表示实验次数</p>
+<p>那么显然 $\xi$ 的分布律满足：</p>
+<p><img src="https://www.zhihu.com/equation?tex=P%5Cleft%28+%5Cxi%3Dn+%5Cright%29%3Dg%5Cleft%28+p%3Bn+%5Cright%29%3Dp%5Cleft%28+1-p+%5Cright%29%5E%7Bn-1%7D" alt="[公式]"> （ <img src="https://www.zhihu.com/equation?tex=n%5Cin%5Cmathbb%7BN%7D%5E%7B%2A%7D" alt="[公式]"> ）</p>
+<p>这就叫<strong>几何分布</strong></p>
+<p>你会发现，所谓“几何分布”，就是其分布列各项构成等比数列</p>
+<p>而等比数列，又称几何数列，这源于除了首项和末项之外，每一项都是前后两项的几何平均数</p>
+<p>几何分布的期望为：</p>
+<p><img src="https://www.zhihu.com/equation?tex=E%5Cleft%28+X+%5Cright%29%3Dp%2B2%5Cleft%28+1-p+%5Cright%29p%2B3%5Cleft%28+1-p+%5Cright%29%5E%7B2%7Dp%2B%5Ccdots%2Bn%5Cleft%28+1-p+%5Cright%29%5E%7Bn-1%7Dp%2B%5Ccdots" alt="[公式]"></p>
+<p>很容易算出 <img src="https://www.zhihu.com/equation?tex=E%5Cleft%28+X+%5Cright%29%3D%5Cfrac%7B1%7D%7Bp%7D" alt="[公式]"> </p>
+<h3 id="指数分布"><a href="#指数分布" class="headerlink" title="指数分布"></a>指数分布</h3><script type="math/tex; mode=display">
+Exp(\lambda)\ \ \ \ \ \ f(x)=\lambda e^{-\lambda x}</script><h3 id="正态分布"><a href="#正态分布" class="headerlink" title="正态分布"></a>正态分布</h3><script type="math/tex; mode=display">
+N(\mu , \ \sigma^2)\ \ \sigma > 0\\
+f(x)=\frac{1}{\sqrt{2\pi}\sigma} e^{-\frac{(x-\mu)^2}{2\sigma ^2}}</script>
     </div>
 
     
@@ -297,13 +297,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2021/06/12/Physics/" rel="prev" title="Physics">
-      <i class="fa fa-chevron-left"></i> Physics
+    <a href="/2021/06/23/English-Inclass-Words/" rel="prev" title="English Inclass Words">
+      <i class="fa fa-chevron-left"></i> English Inclass Words
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2021/06/23/English-Inclass-Words/" rel="next" title="English Inclass Words">
-      English Inclass Words <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -363,6 +360,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B3%8A%E6%9D%BE%E5%88%86%E5%B8%83"><span class="nav-number">1.</span> <span class="nav-text">泊松分布</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%A0%E4%BD%95%E5%88%86%E5%B8%83"><span class="nav-number">2.</span> <span class="nav-text">几何分布</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8C%87%E6%95%B0%E5%88%86%E5%B8%83"><span class="nav-number">3.</span> <span class="nav-text">指数分布</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83"><span class="nav-number">4.</span> <span class="nav-text">正态分布</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
