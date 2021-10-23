@@ -20,15 +20,15 @@
     var CONFIG = {"hostname":"github.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="各种教程的整合, 加上一些自己的理解.">
+  <meta name="description" content="各种教程的整合, 去掉了 trivial 的内容, 加上一些自己的理解.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Verilog-note">
 <meta property="og:url" content="https://github.com/2021/10/22/Verilog-note/index.html">
 <meta property="og:site_name" content="Void-Echo">
-<meta property="og:description" content="各种教程的整合, 加上一些自己的理解.">
+<meta property="og:description" content="各种教程的整合, 去掉了 trivial 的内容, 加上一些自己的理解.">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-10-22T14:25:16.000Z">
-<meta property="article:modified_time" content="2021-10-22T14:27:17.524Z">
+<meta property="article:modified_time" content="2021-10-22T15:08:44.333Z">
 <meta property="article:author" content="voidecho">
 <meta property="article:tag" content="笔记">
 <meta name="twitter:card" content="summary">
@@ -182,7 +182,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2021-10-22 22:25:16 / 修改时间：22:27:17" itemprop="dateCreated datePublished" datetime="2021-10-22T22:25:16+08:00">2021-10-22</time>
+              <time title="创建时间：2021-10-22 22:25:16 / 修改时间：23:08:44" itemprop="dateCreated datePublished" datetime="2021-10-22T22:25:16+08:00">2021-10-22</time>
             </span>
 
           
@@ -210,7 +210,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>各种教程的整合, 加上一些自己的理解. </p>
+        <p>各种教程的整合, 去掉了 trivial 的内容, 加上一些自己的理解. </p>
 <escape><span id="more"></span></escape>
 
 <h3 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h3><h4 id="数值表示"><a href="#数值表示" class="headerlink" title="数值表示"></a>数值表示</h4><p><strong>z / Z : 高阻</strong> 常见于信号（input, reg）没有驱动时的逻辑结果。例如一个 pad 的 input 呈现高阻状态时，其逻辑值和上下拉的状态有关系。上拉则逻辑值为 1，下拉则为 0 。</p>
@@ -301,9 +301,9 @@
 <h4 id="连续赋值"><a href="#连续赋值" class="headerlink" title="连续赋值"></a>连续赋值</h4><p>assign 为关键词，任何已经声明 wire 变量的连续赋值语句都是以 assign 开头，例如：</p>
 <figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">assign &lt;L&gt; = &lt;R&gt;  </span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">wire</span>      Cout, A, B ;</span><br><span class="line"><span class="keyword">assign</span>    Cout  = A &amp; B ;     <span class="comment">//实现计算A与B的功能</span></span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>\<L\>必须是一个标量或者线型向量，而不能是寄存器类型。</L\></p>
-<p>\<R\> 则随便.</R\></p>
-<p>只要\<R\> 表达式的操作数有事件发生（值的变化）时，R  就会立刻重新计算，同时赋值给 L .</R\></p>
+<p>L 必须是一个标量或者线型向量，而不能是寄存器类型。</p>
+<p>R 则随便.</p>
+<p>只要 R 表达式的操作数有事件发生（值的变化）时，R  就会立刻重新计算，同时赋值给 L .</p>
 </blockquote>
 <p>Verilog 还提供了另一种对 wire 型赋值的简单方法，即在 wire 型变量声明的时候同时对其赋值。<u>wire 型变量只能被赋值一次</u>，因此该种连续赋值方式也只能有一次。例如下面赋值方式和上面的赋值例子的赋值方式，效果都是一致的。</p>
 <figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">wire</span>      A, B ;</span><br><span class="line"><span class="keyword">wire</span>      Cout = A &amp; B ;</span><br></pre></td></tr></table></figure>
@@ -367,8 +367,9 @@
 <p>只有一个返回值，且没有输出</p>
 <p>不含有非阻塞赋值语句</p>
 <p>可以调用其他函数，但是<u>不能调用任务</u></p>
-<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> [range-<span class="number">1</span>:<span class="number">0</span>]     function_id ;</span><br><span class="line">input_declaration ;</span><br><span class="line"> other_declaration ;</span><br><span class="line">procedural_statement ;</span><br><span class="line"><span class="keyword">endfunction</span></span><br></pre></td></tr></table></figure>
-
+<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//声明格式</span></span><br><span class="line"><span class="keyword">function</span> [range-<span class="number">1</span>:<span class="number">0</span>]     function_id ;</span><br><span class="line">input_declaration ;</span><br><span class="line"> other_declaration ;</span><br><span class="line">procedural_statement ;</span><br><span class="line"><span class="keyword">endfunction</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//调用格式:trivial</span></span><br></pre></td></tr></table></figure>
+<p>函数在声明时，会隐式的声明一个宽度为 <code>range</code>、 名字为 <code>function_id</code> 的寄存器变量，函数的返回值通过这个变量进行传递。当该寄存器变量没有指定位宽时，默认位宽为 1。</p>
+<h4 id="状态机"><a href="#状态机" class="headerlink" title="状态机"></a>状态机</h4>
     </div>
 
     
@@ -382,7 +383,7 @@
     <div class="social-list">
 
         <div class="social-item">
-          <a target="_blank" class="social-link" href="https://twitter.com/voiecho">
+          <a target="_blank" class="social-link" href="https://twitter.com/void__echo">
             <span class="icon">
               <i class="fab fa-twitter"></i>
             </span>
@@ -468,7 +469,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B9"><span class="nav-number">1.</span> <span class="nav-text">知识点</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%B0%E5%80%BC%E8%A1%A8%E7%A4%BA"><span class="nav-number">1.1.</span> <span class="nav-text">数值表示</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="nav-number">1.2.</span> <span class="nav-text">数据类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%90%91%E9%87%8F"><span class="nav-number">1.3.</span> <span class="nav-text">向量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%9E%E6%95%B0"><span class="nav-number">1.4.</span> <span class="nav-text">实数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%B0%E7%BB%84"><span class="nav-number">1.5.</span> <span class="nav-text">数组</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AD%98%E5%82%A8%E5%99%A8"><span class="nav-number">1.6.</span> <span class="nav-text">存储器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="nav-number">1.7.</span> <span class="nav-text">表达式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8B%BC%E6%8E%A5%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-number">1.8.</span> <span class="nav-text">拼接运算符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9D%A1%E4%BB%B6%E7%BC%96%E8%AF%91"><span class="nav-number">1.9.</span> <span class="nav-text">条件编译</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#include"><span class="nav-number">1.10.</span> <span class="nav-text">include</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#timescale"><span class="nav-number">1.11.</span> <span class="nav-text">timescale</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#default-nettype"><span class="nav-number">1.12.</span> <span class="nav-text">default_nettype</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#resetall"><span class="nav-number">1.13.</span> <span class="nav-text">resetall</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#celldefine"><span class="nav-number">1.14.</span> <span class="nav-text">celldefine</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%82%E6%95%B0"><span class="nav-number">1.15.</span> <span class="nav-text">参数</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%A8%E6%9E%90"><span class="nav-number">2.</span> <span class="nav-text">辨析</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BF%9E%E7%BB%AD%E8%B5%8B%E5%80%BC"><span class="nav-number">2.1.</span> <span class="nav-text">连续赋值</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A8%8B%E5%BA%8F%E8%BF%87%E7%A8%8B%E4%B8%8E%E7%BB%93%E6%9E%84"><span class="nav-number">3.</span> <span class="nav-text">程序过程与结构</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BC%80%E5%A7%8B%E4%B8%8E%E5%BE%AA%E7%8E%AF"><span class="nav-number">3.1.</span> <span class="nav-text">开始与循环</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BF%9E%E7%BB%AD%E8%B5%8B%E5%80%BC-1"><span class="nav-number">3.2.</span> <span class="nav-text">连续赋值</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%97%B6%E5%BA%8F%E6%8E%A7%E5%88%B6"><span class="nav-number">3.3.</span> <span class="nav-text">时序控制</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B7%A5%E7%A8%8B%E7%BB%93%E6%9E%84"><span class="nav-number">4.</span> <span class="nav-text">工程结构</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%87%BD%E6%95%B0"><span class="nav-number">4.1.</span> <span class="nav-text">函数</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B9"><span class="nav-number">1.</span> <span class="nav-text">知识点</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%B0%E5%80%BC%E8%A1%A8%E7%A4%BA"><span class="nav-number">1.1.</span> <span class="nav-text">数值表示</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="nav-number">1.2.</span> <span class="nav-text">数据类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%90%91%E9%87%8F"><span class="nav-number">1.3.</span> <span class="nav-text">向量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%9E%E6%95%B0"><span class="nav-number">1.4.</span> <span class="nav-text">实数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%B0%E7%BB%84"><span class="nav-number">1.5.</span> <span class="nav-text">数组</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AD%98%E5%82%A8%E5%99%A8"><span class="nav-number">1.6.</span> <span class="nav-text">存储器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="nav-number">1.7.</span> <span class="nav-text">表达式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8B%BC%E6%8E%A5%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-number">1.8.</span> <span class="nav-text">拼接运算符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9D%A1%E4%BB%B6%E7%BC%96%E8%AF%91"><span class="nav-number">1.9.</span> <span class="nav-text">条件编译</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#include"><span class="nav-number">1.10.</span> <span class="nav-text">include</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#timescale"><span class="nav-number">1.11.</span> <span class="nav-text">timescale</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#default-nettype"><span class="nav-number">1.12.</span> <span class="nav-text">default_nettype</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#resetall"><span class="nav-number">1.13.</span> <span class="nav-text">resetall</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#celldefine"><span class="nav-number">1.14.</span> <span class="nav-text">celldefine</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%82%E6%95%B0"><span class="nav-number">1.15.</span> <span class="nav-text">参数</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%A8%E6%9E%90"><span class="nav-number">2.</span> <span class="nav-text">辨析</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BF%9E%E7%BB%AD%E8%B5%8B%E5%80%BC"><span class="nav-number">2.1.</span> <span class="nav-text">连续赋值</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A8%8B%E5%BA%8F%E8%BF%87%E7%A8%8B%E4%B8%8E%E7%BB%93%E6%9E%84"><span class="nav-number">3.</span> <span class="nav-text">程序过程与结构</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BC%80%E5%A7%8B%E4%B8%8E%E5%BE%AA%E7%8E%AF"><span class="nav-number">3.1.</span> <span class="nav-text">开始与循环</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BF%9E%E7%BB%AD%E8%B5%8B%E5%80%BC-1"><span class="nav-number">3.2.</span> <span class="nav-text">连续赋值</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%97%B6%E5%BA%8F%E6%8E%A7%E5%88%B6"><span class="nav-number">3.3.</span> <span class="nav-text">时序控制</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B7%A5%E7%A8%8B%E7%BB%93%E6%9E%84"><span class="nav-number">4.</span> <span class="nav-text">工程结构</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%87%BD%E6%95%B0"><span class="nav-number">4.1.</span> <span class="nav-text">函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%8A%B6%E6%80%81%E6%9C%BA"><span class="nav-number">4.2.</span> <span class="nav-text">状态机</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
