@@ -1,8 +1,9 @@
 ---
 layout: page
-title: project 1
-description: a project with a background image
-img: assets/img/12.jpg
+title: SDU-OS-Project
+description: A Simple OS project based on Nachos
+img:
+redirect: https://github.com/void-echo/SDU-OS-Project
 importance: 1
 category: work
 ---

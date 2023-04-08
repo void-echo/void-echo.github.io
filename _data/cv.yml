@@ -64,32 +64,51 @@
 - title: Open Source Projects
   type: time_table
   contents:
-    - title: <a href="https://github.com/void-echo/SDU-OS-Project/">OS Project</a>
+    # - title: <a href="https://github.com/void-echo/SDU-OS-Project/">OS Project</a>
+    #   year: 2022
+    #   description: Simple OS project based on <a href="https://en.wikipedia.org/wiki/Not_Another_Completely_Heuristic_Operating_System"> Nachos </a>
+
+    # - title: <a href="https://github.com/WeiLab-BioChem/Structural-DPP-IV">Structural DPP-IV</a>
+    #   year: 2022
+    #   description: code repo for the paper <b><i> StructuralDPPIV A novel atom-structure based model for discovering dipeptidyl peptidase-IV inhibitory peptides </i></b>
+
+    - title: <a href="https://github.com/void-echo/SDU-Parallel-Lab">Parallel Pivot Selection Algorithm Implementation with OpenMP</a>
       year: 2022
-      description: Simple OS project based on <a href="https://en.wikipedia.org/wiki/Not_Another_Completely_Heuristic_Operating_System"> Nachos </a>
+      description: Implementing a parallelized pivot selection algorithm using OpenMP and other C++ optimization techniques to ensure efficient and accurate results on two datasets. Our team won the 2nd prize with 1,000-yuan bonus, and the project is rated excellent.
 
-# - title: Honors and Awards
-#   type: time_table
-#   contents:
-#     - year: 1921
-#       items: 
-#         - Nobel Prize in Physics 
-#         - Matteucci Medal
-#     - year: 2029
-#       items: 
-#         - Max Planck Medal
+    - title: <a href="https://github.com/void-echo/SDU-OS-Project">Mini Operating System Based on Nachos</a>
+      year: 2022
+      description: Utilizing the Nachos framework to implement a mini operating system with process priority scheduling, semaphore mechanism, two-level indexed file system, system calls, and virtual memory. The project is rated excellent. 
 
-# - title: Academic Interests
-#   type: nested_list
-#   contents:
-#     - title: Topic 1.
-#       items: 
-#         - Description 1.
-#         - Description 2.
-#     - title: Topic 2.
-#       items:
-#         - Description 1.
-#         - Description 2.
+    - title: <a href="https://github.com/void-echo/FastDbProj">GaussDB-Based Online Taxi System</a>
+      year: 2022
+      description: Constructing an online taxi-hailing system with real-time taxi booking and intelligent ordering functions using GaussDB database combined with Spring boot, Vue, Mybatis, and other frameworks. The project is rated excellent. 
+- title: Honors and Awards
+  type: time_table
+  contents:
+    - year: 2021
+      items: 
+        - Academic Second Prize, Shandong University
+        - Honorable Mention, International Mathematical Contest in Modeling
+        - Specialty Scholarship, Shandong University
+    - year: 2022
+      items: 
+        - Academic Second Prize, Shandong University
+        - CET6 / CJT6：  510 / 75.5 
+        - IELTS：  7.5
+
+- title: Academic Interests
+  type: nested_list
+  contents:
+    - title: Bioinformatics.
+      items: 
+        - Biological sequence analysis.
+        - Epigenetics.
+        - Single-cell multi-omics.
+    - title: Deep learning.
+      items:
+        - Multi-task learning.
+        - Multi-modal learning.
 
 - title: Other Interests
   type: list

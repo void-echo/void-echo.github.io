@@ -2,11 +2,11 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
+subtitle: <a href='http://wei-group.net/'>SDU Wei-Group</a>. Jinan, Shandong. <a href='mailto:wd_cas@163.com'> wd_cas@163.com</a>
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: me.jpg
   image_circular: false # crops the image to make it circular
   address: >
     <p>ShunHua Road No.1500, Licheng District</p>
@@ -14,7 +14,7 @@ profile:
 
 news: true  # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true  # includes social icons at the bottom of the page
+social: false  # includes social icons at the bottom of the page
 ---
 
 <!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
@@ -23,5 +23,4 @@ Put your address / P.O. box / other info right below your picture. You can also 
 
 Link to your social media connections, too. This theme is set up to use [Font Awesome icons](http://fortawesome.github.io/Font-Awesome/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them. -->
 
-Junior student @ Shandong University, majoring in Software Engineering. Interested in Deep Learning, Bioinformatics, Japanese and table tennis.
-
+Senior Undergraduate @ [SDU](https://www.sdu.edu.cn/), Coming Master @ [CASIA](http://www.ia.cas.cn/). Interested in NLP, LLM, Model Accelerating, Bioinformatics. Chinese & English & Japanese speaker, ENFP. ✨ Chasing for Courage, Power and Freedom. Love Life.

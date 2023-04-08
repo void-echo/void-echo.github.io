@@ -1,12 +1,8 @@
 github_users:
-  - torvalds
-  - alshedivat
+  - void-echo
+
 
 github_repos:
-  - alshedivat/al-folio
-  - twbs/bootstrap
-  - jekyll/jekyll
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - jpswalsh/academicons
-  - mathjax/MathJax
+  - void-echo/SDU-OS-Project
+  - void-echo/SDU-Parallel-Lab
+  - WeiLab-BioChem/Structural-DPP-IV
