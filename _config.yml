@@ -6,11 +6,11 @@ title: "Ding Wang`s website" # the website title (if blank, full name will be us
 first_name: Ding
 middle_name: 
 last_name: Wang
-email: void@mail.sdu.edu.cn
+email: wd_cas@163.com
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+  Senior Undergraduate @ [SDU](https://www.sdu.edu.cn/), Coming Master @ [CASIA](http://www.ia.cas.cn/). Interested in NLP, LLM, Model Accelerating, Bioinformatics. Chinese & English & Japanese speaker, ENFP. ✨ Chasing for Courage, Power and Freedom. Love Life.
 footer_text: >
-  Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
+  LET THERE BE LIGHT
 keywords: AI, MLSys, CAS  # add your own keywords or leave empty
 
 lang: cn # the language of your site (for example: en, fr, cn, ru, etc.)
