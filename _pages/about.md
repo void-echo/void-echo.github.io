@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='http://wei-group.net/'>SDU Wei-Group</a>. Jinan, Shandong. <a href='mailto:wd_cas@163.com'> wd_cas@163.com</a>
+subtitle: <a href='http://wei-group.net/'>SDU Wei-Group</a>. Jinan, Shandong. <a href='mailto:scholarwd@gmail.com'> scholarwd@gmail.com</a>
 
 profile:
   align: right
