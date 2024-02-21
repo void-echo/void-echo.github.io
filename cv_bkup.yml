@@ -6,19 +6,14 @@
     - name: Date of Birth
       value: 28th September 2001
     - name: Languages
-      value: Chinese, English, Japanese(Advanced), French(Elementary)
+      value: Chinese, English, Japanese(Intermediate), French(Elementary)
 
 - title: Education
   type: time_table
   contents:
-    - title: Master of Artificial Intelligence
-      institution: Institute of Automation, Chinese Academy of Sciences
-      year: 2024 - 2027
-      
     - title: Bachelor's Degree in Software Engineering
       institution: Shandong University
       year: 2020 - 2024
-    
       # description:
       #   - Description 1.
       #   - Description 2.
@@ -91,36 +86,29 @@
 - title: Honors and Awards
   type: time_table
   contents:
-    - year: 2024
-      items:
-        - Outstanding Graduate, Shandong University
-    - year: 2023
-      items: 
-        - Academic Second Prize, Shandong University
-        - IELTS：  7.5
-    - year: 2022
-      items: 
-        - Academic Second Prize, Shandong University
-        - CET6 / CJT6： 510 / 75.5 
     - year: 2021
       items: 
         - Academic Second Prize, Shandong University
         - Honorable Mention, International Mathematical Contest in Modeling
         - Specialty Scholarship, Shandong University
+    - year: 2022
+      items: 
+        - Academic Second Prize, Shandong University
+        - CET6 / CJT6：  510 / 75.5 
+        - IELTS：  7.5
 
 - title: Academic Interests
   type: nested_list
   contents:
-    - title: Deep learning.
-      items:
-        - Multi-modal learning.
-        - LLM / LVM.
-        - MLSys.
     - title: Bioinformatics.
       items: 
         - Biological sequence analysis.
         - Epigenetics.
         - Single-cell multi-omics.
+    - title: Deep learning.
+      items:
+        - Multi-task learning.
+        - Multi-modal learning.
 
 - title: Other Interests
   type: list
