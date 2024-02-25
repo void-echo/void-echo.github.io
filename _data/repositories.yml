@@ -3,6 +3,8 @@ github_users:
 
 
 github_repos:
+  - void-echo/echo_logger
   - void-echo/SDU-OS-Project
   - void-echo/SDU-Parallel-Lab
+  - void-echo/car_detect_web
   - WeiLab-BioChem/Structural-DPP-IV

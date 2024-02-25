@@ -1,11 +1,21 @@
 "Jin":
-  - firstname: ["Junru", "Jin"]
+  - firstname: ["Junru"]
     url: https://scholar.google.com/citations?user=7Lw6yNYAAAAJ&hl=en&oi=ao
 
 "Wei":
-  - firstname: ["Leyi", "Wei"]
+  - firstname: ["Leyi"]
     url: https://scholar.google.com/citations?user=0EAV03MAAAAJ&hl=en&oi=ao
 
-"Liang":
-  - firstname: ["Sirui", "Liang"]
-    url: https://scholar.google.com/citations?user=ZR_IZ84AAAAJ&hl=en&oi=ao
+"Liu":
+  - firstname: ["Qiang"]
+    url: https://scholar.google.com.hk/citations?hl=en&user=D-lKLcMAAAAJ&view_op=list_works&sortby=pubdate
+
+"Wu":
+  - firstname: ["Shu"]
+    url: https://scholar.google.com.hk/citations?hl=en&user=qVge6YYAAAAJ&view_op=list_works&sortby=pubdate
+  - firstname: ["Junfei"]
+    url: https://scholar.google.com.my/citations?hl=en&user=VzRm70cAAAAJ&view_op=list_works&sortby=pubdate
+
+"Li":
+  - firstname: ["Zhongshen"]
+    url: https://scholar.google.com/citations?hl=en&user=-TcouKQAAAAJ&view_op=list_works&sortby=pubdate
