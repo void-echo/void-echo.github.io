@@ -14,5 +14,12 @@ profiles:
     content: about_einstein.md
     image_circular: true # crops the image to make it circular
     more_info: >
-      <p>My Dear Friend, <a href='http://arr2.space/'> arr2 </a> </p>
+      <p><a href='http://arr2.space/'> arr2 </a> My friend who shares empathy and passion with me. </p>
+
+  - align: right
+    image: junru.jpg
+    content: about_junru.md
+    image_circular: true # crops the image to make it circular
+    more_info: >
+      <p>Junru Jin, My Friend and respected senior. He is currently a Ph.D. student at UTSW. </p>
 ---
