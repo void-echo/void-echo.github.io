@@ -1,1 +1,1 @@
-一个普通人。
+My friend who shares empathy and passion with me.
