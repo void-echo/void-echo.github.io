@@ -4,7 +4,7 @@
     - name: Full Name
       value: Ding Wang
     - name: Date of Birth
-      value: 28th September 2001
+      value: September 2001
     - name: Languages
       value: Chinese, English, Japanese(Advanced), French(Elementary)
 
@@ -119,8 +119,7 @@
     - title: Bioinformatics.
       items: 
         - Biological sequence analysis.
-        - Epigenetics.
-        - Single-cell multi-omics.
+        - Genomics
 
 - title: Other Interests
   type: list

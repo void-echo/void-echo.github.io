@@ -8,10 +8,10 @@ middle_name:
 last_name: Wang
 email: scholarwd@gmail.com
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  Senior Undergraduate @ [SDU](https://www.sdu.edu.cn/), Coming Master @ [CASIA](http://www.ia.cas.cn/). Interested in NLP, LLM, Model Accelerating, Bioinformatics. Chinese & English & Japanese speaker, ENFP. ✨ Chasing for Courage, Power and Freedom. Love Life.
+  Master Student @ [CASIA](http://www.ia.cas.cn/), Prev Undergraduate @ [SDU](https://www.sdu.edu.cn/). Interested in Bioinformatics, NLP, LLM, Model Accelerating. Chinese & English & Japanese speaker, ENFP. ✨ Chasing for Courage, Power and Freedom. Love Life.
 footer_text: >
   LET THERE BE LIGHT
-keywords: AI, MLSys, CAS  # add your own keywords or leave empty
+keywords: AI, Bioinformatics  # add your own keywords or leave empty
 
 lang: cn # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: ⚛️  # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
