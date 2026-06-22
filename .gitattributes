@@ -1,0 +1,18 @@
+# Normalize line endings to LF for all text files.
+# Prevents CRLF churn when syncing between Windows (ssh win) and macOS/Linux.
+* text=auto eol=lf
+
+# Explicitly mark common binary assets so they are never normalized.
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.gif   binary
+*.ico   binary
+*.webp  binary
+*.pdf   binary
+*.mp4   binary
+*.mov   binary
+*.woff  binary
+*.woff2 binary
+*.ttf   binary
+*.eot   binary
