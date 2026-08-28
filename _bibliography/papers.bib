@@ -60,6 +60,7 @@
   %   Experimental and predicted RNA three-dimensional structures are expanding rapidly, but RNA structure search still lacks a compact residue-level representation that supports database-scale comparison. Using family-held-out ablations across the currently available experimental RNA structure collection, we found that spatial-neighbour features are markedly more informative for family-level discrimination than conventional backbone and base descriptors. Building on this result, we developed RiboSeek, a search framework based on a 20-letter geometric alphabet (RS-20), an 80-letter structure-and-base composite alphabet (RS-80). Across family-level classification and retrieval benchmarks, RS-80 delivered the strongest overall performance, whereas RS-20 most closely tracked US-align TM-score, indicating better preservation of geometric similarity. RiboSeek searches the full experimental RNA structure database in 204 ms per query and can be applied to predicted RNA structure libraries to prioritize candidate structural relationships for downstream analysis.
   % }
 
+@comment{
 % @article{qiu2026admet,
 %   abbr={Eur. J. Med. Chem.},
 %   title={Accurate and interpretable {ADMET} prediction: Integrating structural, geometric, and global molecular context representations},
@@ -76,6 +77,7 @@
 %     Predicting absorption, distribution, metabolism, excretion, and toxicity (ADMET) profiles early in drug discovery is essential to avoid late-stage failures. However, most current computational models depend on single-view molecular representations. This restricts them from capturing the complex interplay between 2D topology, 3D conformations, and specific functional groups that collectively drive structure-pharmacokinetic relationships. Here, we present LGSM, a comprehensive deep learning framework for integrative molecular property prediction. By fusing structural (2D topology), geometric (3D conformational descriptors), and sequence-derived semantic representations, LGSM provides accurate ADMET predictions. Specifically, a language model-based encoding of SMILES sequences is utilized to capture the global molecular context, seamlessly complementing local functional group characteristics. By fusing these different levels of information, our architecture accounts for both local chemical environments and broader spatial relationships. We evaluated this approach across four public ADMET datasets. To mimic real-world drug design scenarios where new chemotypes are constantly explored, we applied a strict scaffold split. Under these conditions, LGSM consistently outperformed standard computational baselines. Beyond predictive accuracy, we prioritized chemical interpretability. By combining the model's internal analysis with molecular docking, we show that LGSM successfully flags key substructures responsible for metabolic liabilities or transporter recognition. This transparency makes the framework a practical tool to guide rational lead optimization in medicinal chemistry.
 %   }
 % }
+}
 
 
 @article{jin2026melody,
@@ -96,6 +98,7 @@
   %   DNA methylation is a fundamental epigenetic modification that plays crucial roles in transcriptional regulation, cellular differentiation, and genome stability. However, how locus-specific DNA methylation is determined by intrinsic DNA sequence remains poorly understood. Here, we introduce Melody, a deep learning framework that predicts DNA methylation from 10-kb genomic sequences, enabling the integration of both local and long-range sequence signals. Across 39 human tissues, Melody accurately predicts methylation profiles and consistently outperforms existing state-of-the-art methods in whole-chromosome, hypomethylated-region, and cell-type-specific benchmarks. Melody also generalizes to methylation quantitative trait locus (meQTL) effect prediction and identifies regulatory sequence motifs associated with methylation variability. To extend prediction beyond profiled tissues, we further develop Melody-G, which incorporates single-cell RNA-seq foundation model embeddings to infer methylation states in previously unseen cell types directly from transcriptomic data. Together, Melody provides a unified framework for linking genomic sequence and cellular state to DNA methylation and offers new insights into the regulatory logic governing the human methylome.
   % }
 
+@comment{
 % @article{guo2025abtddi,
 %   abbr={ACS Synth. Biol.},
 %   title={{ABT-DDI}: A Graph Transformer Model with Atomic-Bond Structure Awareness for Drug--Drug Interaction Prediction},
@@ -113,6 +116,7 @@
 %     The widespread use of polypharmacy has significantly increased the risk of drug-drug interactions (DDIs), underscoring the critical need for developing accurate drug-drug interaction events (DDIEs) prediction methods. However, current DDI studies inadequately account for the intrinsic relationships between atoms and bonds in drug molecules, while also overlooking the three-dimensional conformational information on these molecules. To address these limitations, we propose ABT-DDI, an innovative DDI prediction model based on a graph transformer architecture, capable of extracting multimodal information from drug molecules to predict DDI risk levels. ABT-DDI introduces the pioneering systematic modeling of spatial relationships including atom-atom, atom-bond, and bond-bond interactions through a multiscale attention mechanism, which effectively captures atomic and bonding interaction patterns to enhance substructure perception. Furthermore, we introduce two dedicated virtual nodes representing global atom and bond embeddings, which systematically aggregate and propagate overall structural information to refine high-level feature learning. Additionally, the model integrates molecular fingerprint features with 3D spatial distance descriptors to establish a comprehensive molecular representation system. Experimental results demonstrate that our model significantly outperforms existing state-of-the-art methods across multiple metrics on two benchmark data sets, showing important application value in drug development and polypharmacy risk warning systems.
 %   }
 % }
+}
 
 
 @article{qiao2025self,
