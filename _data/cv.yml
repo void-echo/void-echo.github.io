@@ -13,60 +13,40 @@
   contents:
     - title: Ph.D. in Artificial Intelligence
       institution: Institute of Automation, Chinese Academy of Sciences
-      year: 2024 - 2027 (expected)
+      year: 2024 - Present
       description:
         - 'Advisor: <a href="https://scholar.google.com.hk/citations?hl=en&user=D-lKLcMAAAAJ&view_op=list_works&sortby=pubdate">Qiang Liu</a>'
 
     - title: Bachelor's Degree in Software Engineering
       institution: Shandong University
       year: 2020 - 2024
-    
-      # description:
-      #   - Description 1.
-      #   - Description 2.
-      #   - title: Description 3.
-      #     contents:
-      #       - Sub-description 1.
-      #       - Sub-description 2.
-    # - title: Federal teaching diploma
-    #   institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-    #   year: 1900
-    #   description:
-    #     - Description 1.
-    #     - Description 2.
 
 - title: Experience
   type: time_table
   contents:
-    - title: Undergraduate Researcher
-      # institution: Institute for Advanced Study, Princeton University
-      year: 2022 - 2024
+    - title: Research Intern
+      institution: RealAI, Beijing
+      year: 2026.04 - 2026.09
       description:
-        - Wei-lab, SDU, Jinan, China
-        # - Description 2.
-        # - title: Description 3.
-        #   contents:
-        #     - Sub-description 1.
-        #     - Sub-description 2.
-    # - title: Visiting Professor
-    #   institution: California Institute of Technology, Pasadena, California, US
-    #   year: 1933
-    #   description:
-    #     - Description 1.
-    #     - Description 2.
+        - Co-developed AVER, an automated artifact verification framework for long-horizon LLM agents.
 
-    # - title: Director
-    #   institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-    #   year: 1917-1933
+    - title: Research Intern
+      institution: Z.ai (Zhipu AI), Beijing
+      year: 2024.10 - 2025.02
+      description:
+        - Conducted research on long-context survey generation and time-series forecasting.
 
-    # - title: Professor of Theoretical Physics
-    #   institution: Karl-Ferdinand University, Prague, Czechoslovakia
-    #   year: 1911 - 1917
-    #   description:
+    - title: Ph.D. Researcher
+      institution: NLPR, Institute of Automation, Chinese Academy of Sciences, Beijing
+      year: 2024.09 - Present
+      description:
+        - Research on genomics, epigenomics, RNA 3D structure & covariance-model search, and AI for Science.
 
-    # - title: Associate Professor of Theoretical Physics
-    #   institution: University of Zurich, Zurich, Switzerland
-    #   year: 1909 - 1911
+    - title: Undergraduate Researcher
+      institution: Wei-lab, Shandong University, Jinan
+      year: 2022.03 - 2024.09
+      description:
+        - Research on biological sequence analysis, peptide discovery, and molecular representation learning.
 
 - title: Honors and Awards
   type: time_table
@@ -74,20 +54,22 @@
     - year: 2026
       items:
         - National Scholarship for Graduate Students
+        - Merit Student, University of Chinese Academy of Sciences (UCAS)
     - year: 2024
       items:
+        - National Gold Medal, 2nd Greater Bay Area AI for Science Competition
         - Bachelor's Degree with Honors, Shandong University
         - Outstanding Graduate, Shandong University
     - year: 2023
-      items: 
+      items:
         - Academic Second Prize, Shandong University
         - IELTS：  7.5
     - year: 2022
-      items: 
+      items:
         - Academic Second Prize, Shandong University
-        - CET6 / CJT6： 510 / 75.5 
+        - CET6 / CJT6： 510 / 75.5
     - year: 2021
-      items: 
+      items:
         - Academic Second Prize, Shandong University
         - Honorable Mention, International Mathematical Contest in Modeling
         - Specialty Scholarship, Shandong University
@@ -95,15 +77,15 @@
 - title: Academic Interests
   type: nested_list
   contents:
-    - title: Deep learning.
+    - title: AI for Science & Bioinformatics
       items:
-        - Multi-modal learning.
-        - LLM / LVM.
-        - MLSys.
-    - title: Bioinformatics.
-      items: 
-        - Biological sequence analysis.
-        - Genomics
+        - Genomics & Epigenomics
+        - RNA Biology & Structure Search
+        - Molecular Representation
+    - title: Artificial Intelligence & Systems
+      items:
+        - LLM Agents
+        - MLSys & GPU Acceleration
 
 - title: Other Interests
   type: list
