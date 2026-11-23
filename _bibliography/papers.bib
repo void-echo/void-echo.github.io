@@ -18,6 +18,23 @@
   %   DNA methylation is a fundamental epigenetic modification that plays crucial roles in transcriptional regulation, cellular differentiation, and genome stability. However, how locus-specific DNA methylation is determined by intrinsic DNA sequence remains poorly understood. Here, we introduce Melody, a deep learning framework that predicts DNA methylation from 10-kb genomic sequences, enabling the integration of both local and long-range sequence signals. Across 39 human tissues, Melody accurately predicts methylation profiles and consistently outperforms existing state-of-the-art methods in whole-chromosome, hypomethylated-region, and cell-type-specific benchmarks. Melody also generalizes to methylation quantitative trait locus (meQTL) effect prediction and identifies regulatory sequence motifs associated with methylation variability. To extend prediction beyond profiled tissues, we further develop Melody-G, which incorporates single-cell RNA-seq foundation model embeddings to infer methylation states in previously unseen cell types directly from transcriptomic data. Together, Melody provides a unified framework for linking genomic sequence and cellular state to DNA methylation and offers new insights into the regulatory logic governing the human methylome.
   % }
 
+@article{wang2026riboseek,
+  abbr={NAR},
+  title={Spatial-neighbour encoding enables fast {RNA} 3D structure search},
+  author={Wang, Ding and Jin, Junru and Qiao, Jianbo and Wei, Leyi and Wu, Shu and Liu, Qiang},
+  journal={Nucleic Acids Research},
+  year={2026},
+  publisher={Oxford University Press},
+  note={Accepted},
+  url={https://www.biorxiv.org/content/10.64898/2026.04.19.719441v1},
+  doi={10.64898/2026.04.19.719441},
+  selected={true}
+}
+
+  % abstract={
+  %   Experimental and predicted RNA three-dimensional structures are expanding rapidly, but RNA structure search still lacks a compact residue-level representation that supports database-scale comparison. Using family-held-out ablations across the currently available experimental RNA structure collection, we found that spatial-neighbour features are markedly more informative for family-level discrimination than conventional backbone and base descriptors. Building on this result, we developed RiboSeek, a search framework based on a 20-letter geometric alphabet (RS-20), an 80-letter structure-and-base composite alphabet (RS-80). Across family-level classification and retrieval benchmarks, RS-80 delivered the strongest overall performance, whereas RS-20 most closely tracked US-align TM-score, indicating better preservation of geometric similarity. RiboSeek searches the full experimental RNA structure database in 204 ms per query and can be applied to predicted RNA structure libraries to prioritize candidate structural relationships for downstream analysis.
+  % }
+
 @article{qiao2026relation,
   abbr={JCTC},
   title={Relation-Aware Pretraining and Reaction Center Modeling for Chemical Reaction Graph Representation Learning},
@@ -63,19 +80,36 @@
   %   Gene expression is a fundamental process in cellular function and organismal phenotype formation, governed by intricate and finely tuned regulatory mechanisms. Deciphering the regulatory code of gene expression and elucidating the transcriptional effects of the genome remain critical challenges in human genetics. While numerous deep learning approaches have been developed to predict gene expression levels, most prioritize DNA sequence information, often overlooking the impact of transcription initiation signals and lacking interpretability regarding both model behavior and feature contributions. In this study, we present an interpretable deep learning framework based on convolutional neural networks with a Gated Recurrent Unit. This method efficiently predicts gene expression levels by integrating DNA sequence data, mRNA half-life features, and transcription initiation signals. We further validate the model on GM12878, HepG2, and K562 data sets, demonstrating its robustness across different human cell lines. Moreover, interpretability analysis demonstrates that the model provides valuable insights into gene expression mechanisms, underscoring its practical utility as a robust tool for understanding and predicting gene expression levels.
   % }
 
-@article{wang2026riboseek,
+@article{wang2026infernal,
   abbr={bioRxiv},
-  title={Spatial-neighbour encoding enables fast RNA 3D structure search},
+  title={{Infernal-GPU}: accurate {E}-values and sensitive covariance-model search for structured {RNAs}},
   author={Wang, Ding and Jin, Junru and Qiao, Jianbo and Wei, Leyi and Wu, Shu and Liu, Qiang},
   journal={bioRxiv},
+  month={nov},
   year={2026},
-  url={https://www.biorxiv.org/content/10.64898/2026.04.19.719441v1},
-  doi={10.64898/2026.04.19.719441},
+  url={https://www.biorxiv.org/content/10.64898/2026.11.15.766754v1},
+  doi={10.64898/2026.11.15.766754},
   selected={true}
 }
 
   % abstract={
-  %   Experimental and predicted RNA three-dimensional structures are expanding rapidly, but RNA structure search still lacks a compact residue-level representation that supports database-scale comparison. Using family-held-out ablations across the currently available experimental RNA structure collection, we found that spatial-neighbour features are markedly more informative for family-level discrimination than conventional backbone and base descriptors. Building on this result, we developed RiboSeek, a search framework based on a 20-letter geometric alphabet (RS-20), an 80-letter structure-and-base composite alphabet (RS-80). Across family-level classification and retrieval benchmarks, RS-80 delivered the strongest overall performance, whereas RS-20 most closely tracked US-align TM-score, indicating better preservation of geometric similarity. RiboSeek searches the full experimental RNA structure database in 204 ms per query and can be applied to predicted RNA structure libraries to prioritize candidate structural relationships for downstream analysis.
+  %   Covariance models (CMs) find structured RNAs by scoring sequence and base pairing together, and they underlie the Infernal software and the Rfam database. Their dynamic programming is expensive, so Infernal relies on two approximations: E-values are calibrated on a short stretch of random sequence, and fast sequence-only filters decide which parts of a target the CM examines. How much accuracy these approximations cost, and where, is largely unknown, because removing them on CPUs is prohibitively slow. We present Infernal-GPU, a GPU implementation of Infernal's CM dynamic programming that matches Infernal's results. Its key step evaluates the one serial recurrence of CM scoring, the self-loop of insert-left states, as two parallel prefix scans. One GPU calibrates all 4,227 Rfam models overnight, which makes calibrations on ten times more random sequence routine. These longer calibrations show that the E-values distributed with Rfam are off by more than twofold for one model in eight. An exhaustive search reference shows that sequence filters discard remote homologs whose similarity lies almost entirely in base pairing; behind permissive filters, Infernal-GPU recovers them with a third of the CPU work that Infernal needs at the same setting. Infernal-GPU is freely available at https://github.com/void-echo/infernal-gpu and from PyPI, together with Rfam 15.0 recalibrated on ten times more random sequence.
+  % }
+
+@article{wang2026epimutations,
+  abbr={bioRxiv},
+  title={{DNA} sequence sets the destination of spontaneous epimutations in plants},
+  author={Wang, Ding and Jin, Junru and Qiao, Jianbo and Wei, Leyi and Liu, Qiang},
+  journal={bioRxiv},
+  month={oct},
+  year={2026},
+  url={https://www.biorxiv.org/content/10.64898/2026.10.21.760629v1},
+  doi={10.64898/2026.10.21.760629},
+  selected={true}
+}
+
+  % abstract={
+  %   Plant genomes gain and lose cytosine methylation spontaneously, far faster than DNA mutates, and these epimutations are inherited. The genome is thought to set a steady state around which methylation fluctuates. Here we show that this steady state, the set point, is written in the DNA of each CG site: REED, a deep-learning model trained on one methylome, reads it. In pedigrees of seven Arabidopsis thaliana accessions, gains concentrated at high set points and losses at low ones, and the equilibrium implied by their rates matched the set point, tracking it within genes. Stress sped epimutation but barely shifted its destination. The set point predicted germline epimutations in rice and changes accumulated in the wild and in a 330-year-old tree. Its rules, cooperation between nearby CG sites and transcription-factor motifs that lower methylation, are shared across flowering plants, so a genome and one methylome reveal where epigenetic variation is heading.
   % }
 
 @comment{
