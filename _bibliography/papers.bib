@@ -18,16 +18,33 @@
   %   DNA methylation is a fundamental epigenetic modification that plays crucial roles in transcriptional regulation, cellular differentiation, and genome stability. However, how locus-specific DNA methylation is determined by intrinsic DNA sequence remains poorly understood. Here, we introduce Melody, a deep learning framework that predicts DNA methylation from 10-kb genomic sequences, enabling the integration of both local and long-range sequence signals. Across 39 human tissues, Melody accurately predicts methylation profiles and consistently outperforms existing state-of-the-art methods in whole-chromosome, hypomethylated-region, and cell-type-specific benchmarks. Melody also generalizes to methylation quantitative trait locus (meQTL) effect prediction and identifies regulatory sequence motifs associated with methylation variability. To extend prediction beyond profiled tissues, we further develop Melody-G, which incorporates single-cell RNA-seq foundation model embeddings to infer methylation states in previously unseen cell types directly from transcriptomic data. Together, Melody provides a unified framework for linking genomic sequence and cellular state to DNA methylation and offers new insights into the regulatory logic governing the human methylome.
   % }
 
+@article{qiao2025self,
+  abbr={Nature Comm},
+  title={A self-conformation-aware pre-training framework for molecular property prediction with substructure interpretability},
+  author={Qiao*, Jianbo and Jin*, Junru and Wang*, Ding and Teng, Saisai and Zhang, Junyu and Yang, Xuetong and Liu, Yuhang and Wang, Yu and Cui, Lizhen and Zou, Quan and others},
+  journal={Nature Communications},
+  volume={16},
+  number={1},
+  pages={1--16},
+  year={2025},
+  publisher={Nature Publishing Group},
+  selected={true}
+}
+
+  % abstract={
+  %   The major challenges in drug development stem from frequent structure-activity cliffs and unknown drug properties, which are expensive and time-consuming to estimate, contributing to a high rate of failures and substantial unavoidable costs in the clinical phases. Herein, we propose the self-conformation-aware graph transformer (SCAGE), an innovative deep learning architecture pretrained with approximately 5 million drug-like compounds for molecular property prediction. Notably, we develop a multitask pretraining framework, which incorporates four supervised and unsupervised tasks: molecular fingerprint prediction, functional group prediction using chemical prior information, 2D atomic distance prediction, and 3D bond angle prediction, covering aspects from molecular structures to functions. It enables learning comprehensive conformation-aware prior knowledge, thereby enhancing its generalization across various molecular property tasks. Moreover, we design a data-driven multiscale conformational learning strategy that effectively guides the model in understanding and representing atomic relationships at the molecular conformational scale. SCAGE achieves significant performance improvements across 9 molecular properties and 30 structure-activity cliff benchmarks. Case studies demonstrate that SCAGE accurately captures crucial functional groups at the atomic level, which are closely associated with molecular activity, providing valuable insights into quantitative structure-activity relationships.
+  % }
+
 @article{wang2026riboseek,
   abbr={NAR},
   title={Spatial-neighbour encoding enables fast {RNA} 3D structure search},
-  author={Wang, Ding and Jin, Junru and Qiao, Jianbo and Wei, Leyi and Wu, Shu and Liu, Qiang},
+  author={Wang, Ding and Jin, Junru and Qiao, Jianbo and Gao, Wenjia and Wei, Leyi and Wu, Shu and Liu, Qiang},
   journal={Nucleic Acids Research},
   year={2026},
   publisher={Oxford University Press},
   note={Accepted},
-  url={https://www.biorxiv.org/content/10.64898/2026.04.19.719441v1},
-  doi={10.64898/2026.04.19.719441},
+  url={https://doi.org/10.1093/nar/gkag1299},
+  doi={10.1093/nar/gkag1299},
   selected={true}
 }
 
@@ -152,23 +169,6 @@
 % }
 }
 
-
-@article{qiao2025self,
-  abbr={Nature Comm},
-  title={A self-conformation-aware pre-training framework for molecular property prediction with substructure interpretability},
-  author={Qiao*, Jianbo and Jin*, Junru and Wang*, Ding and Teng, Saisai and Zhang, Junyu and Yang, Xuetong and Liu, Yuhang and Wang, Yu and Cui, Lizhen and Zou, Quan and others},
-  journal={Nature Communications},
-  volume={16},
-  number={1},
-  pages={1--16},
-  year={2025},
-  publisher={Nature Publishing Group},
-  selected={true}
-}
-
-  % abstract={
-  %   The major challenges in drug development stem from frequent structure-activity cliffs and unknown drug properties, which are expensive and time-consuming to estimate, contributing to a high rate of failures and substantial unavoidable costs in the clinical phases. Herein, we propose the self-conformation-aware graph transformer (SCAGE), an innovative deep learning architecture pretrained with approximately 5 million drug-like compounds for molecular property prediction. Notably, we develop a multitask pretraining framework, which incorporates four supervised and unsupervised tasks: molecular fingerprint prediction, functional group prediction using chemical prior information, 2D atomic distance prediction, and 3D bond angle prediction, covering aspects from molecular structures to functions. It enables learning comprehensive conformation-aware prior knowledge, thereby enhancing its generalization across various molecular property tasks. Moreover, we design a data-driven multiscale conformational learning strategy that effectively guides the model in understanding and representing atomic relationships at the molecular conformational scale. SCAGE achieves significant performance improvements across 9 molecular properties and 30 structure-activity cliff benchmarks. Case studies demonstrate that SCAGE accurately captures crucial functional groups at the atomic level, which are closely associated with molecular activity, providing valuable insights into quantitative structure-activity relationships.
-  % }
 
 @article{chen2024beyond,
   title={Beyond efficiency: Molecular data pruning for enhanced generalization},
