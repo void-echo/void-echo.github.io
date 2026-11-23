@@ -11,10 +11,12 @@
 - title: Education
   type: time_table
   contents:
-    - title: Master of Artificial Intelligence
+    - title: Ph.D. in Artificial Intelligence
       institution: Institute of Automation, Chinese Academy of Sciences
-      year: 2024 - 2027
-      
+      year: 2024 - 2027 (expected)
+      description:
+        - 'Advisor: <a href="https://scholar.google.com.hk/citations?hl=en&user=D-lKLcMAAAAJ&view_op=list_works&sortby=pubdate">Qiang Liu</a>'
+
     - title: Bachelor's Degree in Software Engineering
       institution: Shandong University
       year: 2020 - 2024
@@ -66,28 +68,6 @@
     #   institution: University of Zurich, Zurich, Switzerland
     #   year: 1909 - 1911
 
-- title: Open Source Projects
-  type: time_table
-  contents:
-    # - title: <a href="https://github.com/void-echo/SDU-OS-Project/">OS Project</a>
-    #   year: 2022
-    #   description: Simple OS project based on <a href="https://en.wikipedia.org/wiki/Not_Another_Completely_Heuristic_Operating_System"> Nachos </a>
-
-    # - title: <a href="https://github.com/WeiLab-BioChem/Structural-DPP-IV">Structural DPP-IV</a>
-    #   year: 2022
-    #   description: code repo for the paper <b><i> StructuralDPPIV A novel atom-structure based model for discovering dipeptidyl peptidase-IV inhibitory peptides </i></b>
-
-    - title: <a href="https://github.com/void-echo/SDU-Parallel-Lab">Parallel Pivot Selection Algorithm Implementation with OpenMP</a>
-      year: 2022
-      description: Implementing a parallelized pivot selection algorithm using OpenMP and other C++ optimization techniques to ensure efficient and accurate results on two datasets. Our team won the 2nd prize with 1,000-yuan bonus, and the project is rated excellent.
-
-    - title: <a href="https://github.com/void-echo/SDU-OS-Project">Mini Operating System Based on Nachos</a>
-      year: 2022
-      description: Utilizing the Nachos framework to implement a mini operating system with process priority scheduling, semaphore mechanism, two-level indexed file system, system calls, and virtual memory. The project is rated excellent. 
-
-    - title: <a href="https://github.com/void-echo/FastDbProj">GaussDB-Based Online Taxi System</a>
-      year: 2022
-      description: Constructing an online taxi-hailing system with real-time taxi booking and intelligent ordering functions using GaussDB database combined with Spring boot, Vue, Mybatis, and other frameworks. The project is rated excellent. 
 - title: Honors and Awards
   type: time_table
   contents:
